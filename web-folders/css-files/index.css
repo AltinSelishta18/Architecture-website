@@ -246,6 +246,8 @@ nav#nav-menu.active {
 
 
 
+
+
 /* RESPONSIVE */
 @media (max-width: 1024px) {
   .hero-content {
@@ -283,6 +285,15 @@ nav#nav-menu.active {
     transform: scale(0.99);
   }
 
+  .images{
+    opacity: 1;
+    transition: opacity 0.3s linear;
+  }
+
+  #images.on{
+    opacity: 0;
+  }
+
   .nav-images{
     width: 85%;
     max-width: 800px;
@@ -303,13 +314,14 @@ nav#nav-menu.active {
     transition: opacity 0.3s linear;
 }
 
-.nav-images:hover.nav-images::after{
-  opacity: 1;
-}
-
 .nav-images:hover .nav-img-btn{
   opacity: 1;
 }
+
+.nav-images:hover::after {
+  opacity: 1;
+}
+
 
 .nav-img-btn{
     z-index: 2;

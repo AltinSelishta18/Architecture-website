@@ -22,3 +22,21 @@ window.addEventListener("scroll", function(){
 })
 
 
+// nav-image-slider
+
+const btn = document.querySelector("#nav-img-btn");
+const image = document.querySelector(".images");
+
+let index = 0
+
+const images = [
+  "../images/about-images/nav-img.jpg",
+  "../images/about-images/BUILDING-img.jpg",
+  "../images/about-images/shopping-mall-img.jpg",
+]
+
+btn.addEventListener("click", function(){
+    image.src = images[index];
+
+    index = (index + 1) % images.length;
+})
