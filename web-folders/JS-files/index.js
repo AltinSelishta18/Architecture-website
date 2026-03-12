@@ -10,18 +10,6 @@ hamburger.addEventListener('click', () => {
 });
 
 
-const button = document.querySelector(".small-btn");
-
-window.addEventListener("scroll", function(){
-  if(window.scrollY > 600 && window.scrollY < 1150){
-    button.classList.add("active")
-  }
-  else{
-    button.classList.remove("active")
-  }
-})
-
-
 // nav-image-slider
 
 const btn = document.querySelector("#nav-img-btn");
@@ -30,32 +18,32 @@ const image = document.querySelector(".images");
 let index = 0
 
 const images = [
-  "../images/about-images/nav-img.jpg",
-  "../images/about-images/BUILDING-img.jpg",
-  "../images/about-images/shopping-mall-img.jpg",
+  "../images/nav-images/nav-img.jpg",
+  "../images/nav-images/BUILDING-img.jpg",
+  "../images/nav-images/shopping-mall-img.jpg",
 ]
 
+function showImage(){
+  image.src = images[index];
+}
+
+function Auto_change(){
+  setInterval(() =>{
+      index = (index + 1) % images.length;
+      showImage();
+    }, 5000)
+}
+
 btn.addEventListener("click", function(){
-    image.src = images[index];
-
     index = (index + 1) % images.length;
+    showImage()
 })
 
+Auto_change();
+showImage();
 
-const experience_body = document.querySelectorAll(".reveal");
 
-const observer = new IntersectionObserver((entries) =>{
-  entries.forEach(entry =>{
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
-    }
-  })
-},{
-  threshold: 0.3
-});
 
-experience_body.forEach(entry =>{
-  observer.observe(entry)
-})
+
 
 
