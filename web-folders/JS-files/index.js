@@ -40,3 +40,22 @@ btn.addEventListener("click", function(){
 
     index = (index + 1) % images.length;
 })
+
+
+const experience_body = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver((entries) =>{
+  entries.forEach(entry =>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  })
+},{
+  threshold: 0.3
+});
+
+experience_body.forEach(entry =>{
+  observer.observe(entry)
+})
+
+
