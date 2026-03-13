@@ -44,6 +44,22 @@ showImage();
 
 
 
+// Scroll InterSectionObserver
+const cards = document.querySelectorAll(".card");
+
+
+const Scroll_Animation = new IntersectionObserver((entries) =>{
+  entries.forEach(entry =>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("reveal");
+      Scroll_Animation.unobserve(entry.target);
+    }
+  })
+}, {
+  threshold: 0.25
+})
+
+cards.forEach(card => Scroll_Animation.observe(card));
 
 
 
