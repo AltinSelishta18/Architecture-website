@@ -6,22 +6,9 @@
 /*Poppins font*/
 
 @font-face{
-    font-family: 'Poppins Regular';
-    src:  url(../font-files/Poppins_fonts/Poppins-Regular.woff2) format('woff2'),
-          url(../font-files/Poppins_fonts/Poppins-SemiBold.woff2) format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
   font-family: 'Questrial';
-  src: url('../fonts/Questrial-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+  src: url('../fonts/Questrial-Regular.otf') format('opentype')
 }
-
 
 
 /* ================= HEADER ================= */
@@ -281,6 +268,7 @@ nav#nav-menu.active {
   animation-timeline: view();
   animation-range: 10% 100%;
   color: #a6a6a6;
+
 }
 
 @keyframes features-text{
@@ -293,20 +281,19 @@ nav#nav-menu.active {
 }
 
 .features-cards{
-  height: 150vh;
-  margin-top: 8%;
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-  align-items: center;
-  flex-direction: column;
+  width: 100%;
+  margin-top: 3%;
+  display: grid;
+  place-items: center;
+  grid-template-columns:repeat(1, 1fr);
+
 }
 
 .card{
-  width: 85%;
-  height: 45%;
-  margin: 8% 0% 8%;
-  transform: scale(0);
+  width: 90%;
+  height: 65%;
+  aspect-ratio: 3 / 4;
+  transform: scale(0.95);
   opacity: 0;
   transition: transform 0.3s linear, opacity 0.3s linear;
 }
@@ -325,15 +312,29 @@ nav#nav-menu.active {
 .img-container img{
   width: 100%;
   height: 100%;
+  box-shadow: 4px 4px 4px darkgray;
   object-fit: cover;
 }
 
 .img-container p{
   position: absolute;
   right: 0;
-  bottom: -7%;
+  bottom: -6%;
   color: #a6a6a6;
   font-weight: 600;
+}
+
+@media (min-width: 600px){
+
+  .features-text{
+    width: 60%;
+    font-size: 2rem;
+  }
+  .features-cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
 }
 
 /* RESPONSIVE */
@@ -446,6 +447,28 @@ nav#nav-menu.active {
     height: 100%;
     object-fit: cover;
 }
+
+.features-text{
+  width: 50%;
+  font-size: 2rem;
+}
+
+.features-cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+}
+
+.card{
+  width: 80%;
+  height: 80%;
+  aspect-ratio: 3 / 4;
+}
+
+.img-container p{
+  bottom: -10%;
+}
+
 
 }
 
