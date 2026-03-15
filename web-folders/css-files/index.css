@@ -249,6 +249,7 @@ nav#nav-menu.active {
   width: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .features-title{
@@ -268,15 +269,18 @@ nav#nav-menu.active {
   animation-timeline: view();
   animation-range: 10% 100%;
   color: #a6a6a6;
+  opacity: 0.5;
 
 }
 
 @keyframes features-text{
   0%{
     color: #a6a6a6;
+    opacity: 0.5;
   }
   100%{
     color: #000;
+    opacity: 1;
   }
 }
 
@@ -322,6 +326,40 @@ nav#nav-menu.active {
   bottom: -6%;
   color: #a6a6a6;
   font-weight: 600;
+}
+
+.features-btn{
+  background-color: #000;
+  width: 240px;
+  height: 80px;
+  position: absolute;
+  bottom: 2.5%;
+  right: 5%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  font-size: 1.4rem;
+  border-radius: 50px;
+  text-decoration: none;
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.features-btn i{
+  font-size: 2rem;
+}
+
+.features-btn.reveal-btn{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.features-btn:hover{
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.233), rgba(245, 245, 245, 0.096));
+  backdrop-filter: blur(15px);
+  outline: 1px solid black;
 }
 
 @media (min-width: 600px){

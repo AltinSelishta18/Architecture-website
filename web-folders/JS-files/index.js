@@ -46,12 +46,13 @@ showImage();
 
 // Scroll InterSectionObserver
 const cards = document.querySelectorAll(".card");
-
+const features_btn = document.querySelectorAll(".features-btn");
 
 const Scroll_Animation = new IntersectionObserver((entries) =>{
   entries.forEach(entry =>{
     if(entry.isIntersecting){
       entry.target.classList.add("reveal");
+      entry.target.classList.add("reveal-btn")
       Scroll_Animation.unobserve(entry.target);
     }
   })
@@ -60,6 +61,7 @@ const Scroll_Animation = new IntersectionObserver((entries) =>{
 })
 
 cards.forEach(card => Scroll_Animation.observe(card));
+features_btn.forEach(button => Scroll_Animation.observe(button))
 
 
 
