@@ -46,12 +46,17 @@ showImage();
 
 // Scroll InterSectionObserver
 const cards = document.querySelectorAll(".card");
+const feature_btn = document.querySelector(".features-btn");
 
 const Scroll_Animation = new IntersectionObserver((entries) =>{
   entries.forEach(entry =>{
     if(entry.isIntersecting){
       entry.target.classList.add("reveal");
+      feature_btn.classList.add("reveal")
       Scroll_Animation.unobserve(entry.target);
+    }
+    else{
+      feature_btn.classList.remove("reveal")
     }
   })
 }, {
@@ -59,19 +64,8 @@ const Scroll_Animation = new IntersectionObserver((entries) =>{
 })
 
 cards.forEach(card => Scroll_Animation.observe(card));
+btnObserver.observe(features_section);
 
-
-//features-btn reveal
-
-const features_btn = document.querySelector(".features-btn");
-
-window.addEventListener("scroll", function(){
-  if(window.scrollY > 500){
-    features_btn.classList.add("show")
-  } else {
-    features_btn.classList.remove("show")
-  }
-})
 
 
 
