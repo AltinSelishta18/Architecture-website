@@ -385,8 +385,9 @@ nav#nav-menu.active {
 .service-left{
   background-color: red;
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   display: flex;
+  gap: 10px;
   flex-direction: column;
 }
 .service-left-slogan{
@@ -416,6 +417,34 @@ nav#nav-menu.active {
   color: #fff;
   font-weight: 700;
   font-size: 2.5rem;
+}
+
+.services-small-img{
+  width: 95%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 21vh;
+  padding-left: 3.5%;
+}
+
+.services-small-img img{
+  width: 100%;
+  height: 100%;
+}
+
+.service-big-img{
+  background-color: rgb(122, 16, 16);
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-big-img img{
+  width: 90%;
+  height: 90%;
 }
 
 
