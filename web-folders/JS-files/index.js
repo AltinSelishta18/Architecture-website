@@ -55,9 +55,6 @@ const Scroll_Animation = new IntersectionObserver((entries) =>{
       feature_btn.classList.add("reveal")
       Scroll_Animation.unobserve(entry.target);
     }
-    else{
-      feature_btn.classList.remove("reveal")
-    }
   })
 }, {
   threshold: 0.25
