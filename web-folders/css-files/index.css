@@ -455,6 +455,17 @@ nav#nav-menu.active {
   object-fit: cover;
 }
 
+.progress-line{
+    position: absolute;
+    left: 5%;
+    bottom: 7%;
+    background-color: #fff;
+    width: 0%;
+    height: 3px;
+    z-index: 10;
+    display: block;
+  }
+
 .small-img-overlay::before{
   content: '';
   position: absolute;
@@ -510,7 +521,6 @@ nav#nav-menu.active {
   border: 2px solid black;
   transform: scale(0.97);
 }
-
 
 /*Here starts responsive design*/
 @media (min-width: 600px){
@@ -739,8 +749,9 @@ nav#nav-menu.active {
   .big-img-btn{
     right: 5%;
     bottom: 5%;
+    transition: background 0.3s linear, transform 0.3s linear;
+    transition-duration: 0.4s;
   }
-
 }
 
 
