@@ -30,9 +30,10 @@ body, html {
 header {
   position: relative;
   height: 100vh;
-  background-image: url('../images/header-img/header-img.jpg');
+  background-image: url('../images/header-img/header-img.webp');
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+  background-repeat: no-repeat;
   color: #fff;
   overflow: hidden;
 }
@@ -103,8 +104,7 @@ nav#nav-menu {
   left: -100%;
   width: 100%;
   height: 100%;
-  background-color: #0000006c;
-  backdrop-filter: blur(15px);
+  background-color: #000000d2;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -354,9 +354,6 @@ nav#nav-menu.active {
   transform: translateY(60px) scale(0.9);
   transition: background 0.3s linear,
     backdrop-filter 0.3s linear,
-    outline 0.3s linear,
-    opacity 0.3s linear,
-    transform 0.3s linear;
 }
 
 .features-btn.reveal{
@@ -455,17 +452,6 @@ nav#nav-menu.active {
   object-fit: cover;
 }
 
-.progress-line{
-    position: absolute;
-    left: 5%;
-    bottom: 7%;
-    background-color: #fff;
-    width: 0%;
-    height: 3px;
-    z-index: 10;
-    display: block;
-  }
-
 .small-img-overlay::before{
   content: '';
   position: absolute;
@@ -492,6 +478,18 @@ nav#nav-menu.active {
   object-fit: cover;
 }
 
+
+/*.fade class it is created to create a smooth change when images move from the small image to big image*/
+.fade{
+  opacity: 0;
+  transform: scale(0.98);
+}
+
+.services-small-img img, .service-big-img img{
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+}
+
 .big-img-overlay::before{
   content: '';
   position: absolute;
@@ -505,10 +503,10 @@ nav#nav-menu.active {
 
 .big-img-btn{
   position: absolute;
-  right: 10%;
-  bottom: 10%;
+  right: 7%;
+  bottom: 7%;
   z-index: 2;
-  background-color: rgb(0, 0, 0);
+  background-color: #000;
   padding: 35px;
   border-radius: 8px;
   color: #fff;
@@ -520,6 +518,16 @@ nav#nav-menu.active {
   background-color: rgba(0, 0, 0, 0.493);  
   border: 2px solid black;
   transform: scale(0.97);
+}
+
+#service-title{
+  position: absolute;
+  left: 5%;
+  bottom: 6%;
+  color: #fff;
+  z-index: 20;
+  font-size: 2.2rem;
+  font-weight: 300;
 }
 
 /*Here starts responsive design*/
@@ -744,13 +752,6 @@ nav#nav-menu.active {
   .service-big-img img{
     width: 95%;
     height: 95%;
-  }
-
-  .big-img-btn{
-    right: 5%;
-    bottom: 5%;
-    transition: background 0.3s linear, transform 0.3s linear;
-    transition-duration: 0.4s;
   }
 }
 
