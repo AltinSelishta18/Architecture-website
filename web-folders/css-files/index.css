@@ -546,14 +546,14 @@ nav#nav-menu.active {
     display: flex;
     flex-direction: row;
     min-height: 70vh;
-  }git 
+  }
 
   .service-left-title h4::after{
-    width: 80px;
+    max-width: 300px;
   }
 
   .services-small-img{
-    min-height: 30vh;
+    min-height: 33vh;
     width: 100%;
   }
 
@@ -575,6 +575,10 @@ nav#nav-menu.active {
   .hero-content .slogan {
     font-size: 2rem;
     max-width: 100%;
+  }
+
+  .services-small-img{
+    min-height: 260px;
   }
 }
 
@@ -735,9 +739,10 @@ nav#nav-menu.active {
     height: 80vh;
   }
 
-  .services-small-img{
+  .service-left .services-small-img{
     width: 100%;
-    max-width: 750px;
+    max-width: 850px;
+    min-height: 195px;
   }
 
   .services-small-img img{
@@ -754,5 +759,18 @@ nav#nav-menu.active {
     height: 95%;
   }
 }
+
+@media(min-width: 1441px){
+  .service-big-img{
+    max-width: 1000px;
+  }
+
+  .services-small-img{
+    max-width: 1200px;
+    min-height: 300px;
+  }
+}
+
+
 
 
