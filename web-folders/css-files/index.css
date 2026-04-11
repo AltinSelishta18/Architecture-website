@@ -604,7 +604,6 @@ nav#nav-menu.active {
 }
 
 .about-main-info p{
-  text-align: justify;
   width: 80%;
   font-size: 1.2rem;
   color: #fff;
@@ -642,9 +641,11 @@ nav#nav-menu.active {
 
 .stats-body{
   height: 45vh;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 55px;
 }
 
 .stat h3{
