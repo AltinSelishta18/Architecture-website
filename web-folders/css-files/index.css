@@ -648,7 +648,7 @@ nav#nav-menu.active {
 }
 
 .stat h3{
-  font-size: 2.7rem;
+  font-size: 0.9rem;
   text-align: center;
   color: #fff;
 }
@@ -732,7 +732,6 @@ nav#nav-menu.active {
 
   .about-main-info{
     width: 50%;
-    background-color: greenyellow;
   }
 }
 
