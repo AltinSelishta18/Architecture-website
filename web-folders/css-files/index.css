@@ -389,7 +389,7 @@ nav#nav-menu.active {
 }
 
 .service-left-title h4{
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.5vw, 2.5rem);
   font-weight: 500;
   color: #5f5f5f;
   position: relative;
@@ -429,7 +429,7 @@ nav#nav-menu.active {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 28vh;
+  min-height: 28vh;
   padding-left: 3%;
   max-width: 700px;
   position: relative;
@@ -517,6 +517,10 @@ nav#nav-menu.active {
   z-index: 20;
   font-size: 2.2rem;
   font-weight: 300;
+}
+
+.about-us{
+  min-height: 100vh;
 }
 
 /*Here starts responsive design*/
@@ -720,11 +724,11 @@ nav#nav-menu.active {
     height: 80vh;
   }
 
-   .services-small-img{
+  .services-small-img{
     width: 100%;
     max-width: 850px;
-    height: clamp(220px, 28vw, 395px);
-    overflow: hidden;
+    padding-bottom: 2%;
+    padding-left: 2%;
   }
 
   .services-small-img img{
@@ -747,7 +751,7 @@ nav#nav-menu.active {
     max-width: 1000px;
   }
 
-  .services-small-img{
+  .service-left .services-small-img{
     max-width: 1200px;
     min-height: 440px;
   }
