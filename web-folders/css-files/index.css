@@ -425,18 +425,17 @@ nav#nav-menu.active {
 }
 
 .services-small-img{
-  width: 95%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 28vh;
-  padding-left: 3%;
+  height: clamp(200px, 40vh, 900px);
   max-width: 700px;
   position: relative;
 }
 
 .services-small-img img{
-  width: 100%;
+  width: 90%;
   height: 100%;
   object-fit: cover;
 }
@@ -701,7 +700,7 @@ nav#nav-menu.active {
   }
 
   .services-section{
-      min-height: 80vh;
+    min-height: 80vh;
   }
 
   .service-left-items{
@@ -729,6 +728,7 @@ nav#nav-menu.active {
     max-width: 850px;
     padding-bottom: 2%;
     padding-left: 2%;
+    
   }
 
   .services-small-img img{
