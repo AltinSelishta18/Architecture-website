@@ -379,8 +379,9 @@ nav#nav-menu.active {
 
 .service-left{
   width: 100%;
-  min-height: 70vh;
+  height: 69vh;
   display: flex;
+  justify-content: space-between;
   gap: 10px;
   flex-direction: column;
 }
@@ -421,7 +422,7 @@ nav#nav-menu.active {
 .service-left-items ul li a{
   color: #fff;
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 4.5vw, 5rem);
 }
 
 .services-small-img{
@@ -430,7 +431,7 @@ nav#nav-menu.active {
   justify-content: center;
   align-items: center;
   height: clamp(200px, 40vh, 900px);
-  max-width: 700px;
+  max-width: 850px;
   position: relative;
 }
 
@@ -567,6 +568,11 @@ nav#nav-menu.active {
   .hero-content .slogan {
     font-size: 2rem;
     max-width: 100%;
+  }
+
+  .services-small-img img{
+    width: 95%;
+    margin: auto;
   }
 }
 
@@ -721,13 +727,13 @@ nav#nav-menu.active {
 
   .service-left{
     height: 80vh;
+    
   }
 
   .services-small-img{
     width: 100%;
     max-width: 850px;
-    padding-bottom: 2%;
-    padding-left: 2%;
+    padding: 0% 0% 2% 2%;
     
   }
 
