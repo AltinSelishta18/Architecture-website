@@ -43,16 +43,16 @@ Auto_change();
 showImage();
 
 
-
 // Scroll InterSectionObserver
 const cards = document.querySelectorAll(".card");
 const feature_btn = document.querySelector(".features-btn");
+const stats_body = document.querySelector(".stats-body");
 
 const Scroll_Animation = new IntersectionObserver((entries) =>{
   entries.forEach(entry =>{
     if(entry.isIntersecting){
       entry.target.classList.add("reveal");
-      feature_btn.classList.add("reveal")
+      feature_btn.classList.add("reveal");
       Scroll_Animation.unobserve(entry.target);
     }
   })
@@ -61,6 +61,43 @@ const Scroll_Animation = new IntersectionObserver((entries) =>{
 })
 
 cards.forEach(card => Scroll_Animation.observe(card));
+
+
+//About us increase_count onscreen animation
+const project_count = document.querySelector("#project-count");
+const exp_count = document.querySelector("#experience-count");
+const ongoing_count = document.querySelector("#ongoing-count");
+
+function Increase_count(count, limit, element){
+    const count_interval = setInterval(() =>{
+        count++;
+
+        element.textContent = `${count}+`;
+
+        if(count === limit){
+          clearInterval(count_interval);
+        }
+    }, 50)
+}
+
+
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+
+      Increase_count(0, 120, project_count);
+      Increase_count(0, 12, exp_count);
+      Increase_count(0, 45, ongoing_count);
+
+      statsObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.25 });
+
+statsObserver.observe(stats_body);
+
+
+
 
 // Service section image slider
 
@@ -113,6 +150,9 @@ function Next_image(){
 
 Show_image()
 setInterval(Next_image, 5000);
+
+
+//Increase count animation
 
 
 

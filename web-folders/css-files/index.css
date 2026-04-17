@@ -820,6 +820,60 @@ nav#nav-menu.active {
     width: 95%;
     height: 95%;
   }
+
+  .about-us{
+    min-height: 40vh;
+    display: flex;
+  }
+
+  .about-us-body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+
+  .about-main-img{
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-img-container{
+    width: 70%;
+    height: 100%;
+    margin-top: 4%;
+  }
+
+  .stat{
+    width: 25%;
+    height: 30vh;
+    border-right: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .stat:nth-child(3){
+    border-right: none;
+  }
+  .stat h3{
+    font-size: 3rem;
+  }
+
+  .about-main-info{
+    width: 50%;
+  }
+
+  .stats-body{
+    display: flex;
+    width: 70%;
+    margin: auto;
+    gap: 0px;
+  }
 }
 
 @media(min-width: 1441px){
