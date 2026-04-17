@@ -390,9 +390,9 @@ nav#nav-menu.active {
 }
 
 .service-left-title h4{
-  font-size: clamp(1.5rem, 1.5vw, 2.5rem);
-  font-weight: 500;
-  color: #5f5f5f;
+  font-size: clamp(1rem, 1.5vw, 2.5rem);
+  font-weight: 700;
+  color: #fff;
   position: relative;
   display: inline-block;
 }
@@ -520,7 +520,77 @@ nav#nav-menu.active {
 }
 
 .about-us{
+  min-height: 150vh;
+  background-color: #191919;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-us-title{
+  height: 7vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 70%;
+}
+
+.about-us-title h4{
+  color: #fff;
+  font-size: clamp(1rem, 1.5vw, 2.5rem);
+}
+
+.about-us-title span{
+  background-color: #5f5f5f;
+  width: 25%;
+  height: 3px;
+  max-width: 25%;
+}
+
+.about-us-body{
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.about-us-img{
+  width: 90%;
+  height: 45vh;
+}
+
+.about-us-img img{
+  width: 100%;
+  height: 100%;
+}
+
+.about-us-info{
+  width: 100%;
+  height: 45vh;
+}
+
+.main-title{
+  width: 70%;
+  height: 11vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-title h3{
+  font-size: clamp(2rem, 2.5vw, 4rem);
+  color: #fff;
+  position: relative;
+}
+
+.main-title h3::before{
+  content: '';
+  position: absolute;
+  left: 2%;
+  bottom: -10%;
+  background-color: #fff;
+  width: 25%;
+  height: 2px;
 }
 
 /*Here starts responsive design*/
