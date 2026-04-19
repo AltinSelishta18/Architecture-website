@@ -34,7 +34,7 @@ body, html {
 header {
   position: relative;
   height: 100vh;
-  background-image: url('../images/header-img/HEADER-img.webp');
+  background-image: url('../images/HEADER-img.webp');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -738,16 +738,54 @@ nav#nav-menu.active {
   }
 
   .about-us{
-    min-height: 130vh;
+    min-height: 100vh !important;
   }
 
   .about-us-body{
-    min-height: 75vh;
+    min-height: auto;
   }
 
   .about-us-info{
     height: 25vh;
     gap: 15px;
+  }
+
+  .about-us-title{
+    width: 50%;
+    max-width: 400px;
+  }
+}
+
+@media(min-width: 800px){
+  .about-us-body{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .about-us-title{
+    width: 35%;
+  }
+
+  .stats{
+    height: 40vh;
+  }
+
+  .stat{
+    width: 23%;
+    height: 80%;
+    max-height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid white;
+  }
+
+  .stats .stat:nth-child(3){
+    border-right: none;
+  }
+
+  .stats-title{
+    width: 30%;
   }
 }
 
