@@ -18,9 +18,9 @@ const image = document.querySelector(".images");
 let index = 0
 
 const images = [
-  "../images/nav-images/nav-img.webp",
-  "../images/nav-images/BUILDING-img.webp",
-  "../images/nav-images/shopping-mall-img.webp",
+  "../images/nav-img.jpg",
+  "../images/BUILDING-img.jpg",
+  "../images/shopping-mall-img.jpg",
 ]
 
 function showImage(){
@@ -70,19 +70,19 @@ const service_title = document.querySelector("#service-title");
 
 const services_images = [
   {
-    image: "../images/services-images/service-interior.webp",
+    image: "../images/service-interior.jpg",
     title: "INTERIOR"
   },            
   {
-    image: "../images/services-images/feature-img-2.webp",
+    image: "../images/feature-img-2.jpg",
     title: "EXTERIOR"
   },
   {
-    image: "../images/services-images/service-concept.webp",
+    image: "../images/service-concept.jpg",
     title: "CONCEPT"
   },
   {
-    image: "../images/services-images/service-commercial.webp",
+    image: "../images/service-commercial.jpg",
     title: "COMMERCIAL"
   }
 ]
