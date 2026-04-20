@@ -8,6 +8,8 @@
     <!--CSS link-->
     <link rel="stylesheet" href="../css-files/index.css">
 
+    <!--AOS animations link-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--Icons External Link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -30,8 +32,8 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
                 <li><a href="#">Services</a></li>
+                <li><a href="#">Projects</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
 
@@ -67,10 +69,10 @@
             <span></span> <!--This is a horizontal line decoration for the title HUMAN EXPERIENCE-->
         </div>
         <div class="about-us-body">
-            <div class="about-us-img">
+            <div data-aos="fade-left" class="about-us-img">
                 <img src="../images/feature-3-img.jpg" alt="About-us Image">
             </div>
-            <div class="about-us-content">
+            <div data-aos="zoom-in" class="about-us-content">
                 <div class="main-title">
                     <h3>BS Architecture</h3>
                 </div>
@@ -100,12 +102,8 @@
                 </div>
             </div>
             <!--About us call to action button-->
-            <div class="return-top">
-                <a href="#nav-menu"><i class="ri-arrow-up-long-line"></i></a>
-            </div>
     </div>
 
-<!--here ends features section-->
     <section class="services-section">
         <div class="service-left">
             <div class="service-left-title">
@@ -113,10 +111,10 @@
             </div>
             <div class="service-left-items">
                 <ul>
-                    <li><a href="">INTERIOR.</a></li>
-                    <li><a href="">EXTERIOR.</a></li>
-                    <li><a href="">CONCEPTS.</a></li>
-                    <li><a href="">COMMERCIAL.</a></li>
+                    <li data-aos="fade-right"><a href="">INTERIOR.</a></li>
+                    <li data-aos="fade-right"><a href="">EXTERIOR.</a></li>
+                    <li data-aos="fade-right"><a href="">CONCEPTS.</a></li>
+                    <li data-aos="fade-right"><a href="">COMMERCIAL.</a></li>
                 </ul>
             </div>
             <div class="services-small-img"><!--Next Image of main Image in section services-->
@@ -131,43 +129,62 @@
             <h4 id="service-title"></h4><!--This heading will contain text dynamically (made with JS)-->
         </div>
     </section>
-<!--here starts services section-->
+<!--here ends services section-->
 
-<section class="features">
-    <div class="features-title">
-        <h4>FEATURED PROJECTS</h4>
-    </div>
-    <div class="features-text">
-        <p>From concept to completion, every project is shaped by a passion for design and a dedication to architectural excellence.</p>
-    </div>
-    <div class="features-cards">
-        <div class="card">
-            <div class="img-container">
-                <img src="../images/feature-img-1.jpg" loading="lazy" alt="First image of featured projects">
-                <p>PRISHTINA, KOSOVO</p>
+
+    <!--Here starts ferature projects section-->
+    <section class="features">
+        <div class="features-title">
+            <h4>FEATURED PROJECTS</h4>
+        </div>
+        <div class="features-text">
+            <p>From concept to completion, every project is shaped by a passion for design and a dedication to architectural excellence.</p>
+        </div>
+        <div class="features-cards">
+            <div class="card">
+                <div class="img-container">
+                    <img src="../images/feature-img-1.jpg" loading="lazy" alt="First image of featured projects">
+                    <p>PRISHTINA, KOSOVO</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img-container">
+                    <img src="../images/feature-img-2.jpg" loading="lazy" alt="Second image of featured projects">
+                    <p>GJILAN, KOSOVO</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img-container">
+                    <img src="../images/feature-3-img.jpg" loading="lazy" alt="Third image of featured projects">
+                    <p>TIRANA, ALBANIA</p>
+                </div>
             </div>
         </div>
-        <div class="card">
-            <div class="img-container">
-                <img src="../images/feature-img-2.jpg" loading="lazy" alt="Second image of featured projects">
-                <p>GJILAN, KOSOVO</p>
+        <!--Here goes cta-btn-->
+        <a class="features-btn" href="">Find More<i class="ri-arrow-right-down-line"></i></a>
+         <div class="return-top">
+                <a href="#nav-menu"><i class="ri-arrow-up-long-line"></i></a>
             </div>
-        </div>
-        <div class="card">
-            <div class="img-container">
-                <img src="../images/feature-3-img.jpg" loading="lazy" alt="Third image of featured projects">
-                <p>TIRANA, ALBANIA</p>
-            </div>
-        </div>
+    </section>
+
+    <div class="calculator">
+        <h2>Discover Your<br> Project Estimate.</h2>
+        <a href="">
+            <span>Calculate Now</span>
+            <i class="ri-arrow-right-long-line"></i>
+        </a>
     </div>
-    <!--Here goes cta-btn-->
-    <a class="features-btn" href="">Find More<i class="ri-arrow-right-down-line"></i></a>
-</section>
-
-
-    <!--Here ends about-us section-->
-
 
 <script src="../JS-files/index.js" defer></script>
+
+<!--AOS animations JS script link-->
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+  });
+</script>
 </body>
 </html>
