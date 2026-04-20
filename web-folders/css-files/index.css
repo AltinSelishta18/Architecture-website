@@ -715,6 +715,14 @@ nav#nav-menu.active {
   color: #fff;
 }
 
+footer{
+  min-height: 100vh;
+  background-image: url(../images/HEADER-img.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 /*Here starts responsive design*/
 @media (min-width: 600px){
 

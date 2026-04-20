@@ -134,25 +134,30 @@ function Increase_count(count, limit, element){
     }, 50)
 }
 
-let started = false
-const stats_trigger = new IntersectionObserver((entries) =>{
-  entries.forEach(entry =>{
-      if(entry.isIntersecting){
-        if(!started){
-          Increase_count(0, 65, project_count);
-          Increase_count(0, 15, exp_count);
-          Increase_count(0, 35, ongoing_count);
-          started = true;
-        }
-        return_arrow.classList.add("active");
-      }
-      else{
-        return_arrow.classList.remove("active");
-      }
+const stats_trigger = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+
+    if (entry.isIntersecting) {
+
+      Increase_count(0, 65, project_count);
+      Increase_count(0, 15, exp_count);
+      Increase_count(0, 35, ongoing_count);
+
+      return_arrow.classList.add("active");
+
+      stats_trigger.unobserve(entry.target);
+    }
+
   });
+}, {
+  threshold: 0.5
 });
 
-stats_trigger.observe(document.querySelector(".stats"))
+const stats = document.querySelector(".stats");
+
+if (stats) {
+  stats_trigger.observe(stats);
+}
 
 
 
