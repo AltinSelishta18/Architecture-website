@@ -87,7 +87,7 @@ header .overlay {
   height: 3px;
   background-color: #fff;
   transition: 0.3s;
-  z-index: 17;
+  z-index: 51;
 }
 
 /* HAMBURGER ANIMACIONI */
@@ -678,7 +678,7 @@ nav#nav-menu.active {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 100;
+  z-index: 50;
   height: 0vh;
   position: fixed;
   bottom: 5%;
