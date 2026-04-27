@@ -52,6 +52,7 @@ const Scroll_Animation = new IntersectionObserver((entries) =>{
     if(entry.isIntersecting){
       entry.target.classList.add("reveal");
       feature_btn.classList.add("reveal");
+      return_arrow.classList.add("active");
       Scroll_Animation.unobserve(entry.target);
     }
   })
@@ -142,9 +143,6 @@ const stats_trigger = new IntersectionObserver((entries) => {
       Increase_count(0, 65, project_count);
       Increase_count(0, 15, exp_count);
       Increase_count(0, 35, ongoing_count);
-
-      return_arrow.classList.add("active");
-
       stats_trigger.unobserve(entry.target);
     }
 

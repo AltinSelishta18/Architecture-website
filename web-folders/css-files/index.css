@@ -550,6 +550,7 @@ nav#nav-menu.active {
   z-index: 20;
   font-size: 2.2rem;
   font-weight: 300;
+  padding: 0px 10px;
 }
 
 /*Here features section*/
@@ -687,7 +688,7 @@ nav#nav-menu.active {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 50;
+  z-index: 150;
   height: 0vh;
   position: fixed;
   bottom: 5%;
