@@ -683,7 +683,7 @@ nav#nav-menu.active {
 
 .return-top{
   background-color: #000;
-  border: 1px solid black;
+  border: 1px solid white;
   width: 75px;
   display: flex;
   justify-content: center;
@@ -778,6 +778,52 @@ nav#nav-menu.active {
 
 .calculator a:hover i{
     transform: translateX(25px);
+}
+
+footer{
+  min-height: 100vh;
+  background-image: url(../images/HEADER-img.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000080;
+  z-index: 1;
+}
+
+.content-container{
+  width: 95%;
+  min-height: 95vh;
+  background-color: #00000080;
+  display: flex;
+  z-index: 2;
+  flex-direction: column;
+}
+
+.footer-title{
+  background-color: red;
+  height: 10vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 6%;
+}
+
+.footer-title h2{
+  color: #fff;
+  font-size: clamp(3rem, 4vw, 4.5rem);
 }
 
 /*Here starts responsive design*/
