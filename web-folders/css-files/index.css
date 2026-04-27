@@ -823,7 +823,7 @@ footer::before{
 
 .footer-title h2{
   color: #fff;
-  font-size: clamp(3rem, 4vw, 4.5rem);
+  font-size: clamp(2.5rem, 3vw, 4rem);
 }
 
 .footer-nav{
@@ -842,16 +842,19 @@ footer::before{
 }
 
 .footer-nav-head h4{
-  font-size: clamp(1.4rem, 3vw, 4rem);
-  color: #d9d9d9;
+  font-size: clamp(1.5rem, 2vw, 2.3rem);
+  color: #fff;
 }
 
 .footer-nav-head p{
-  font-size: clamp(0.8rem, 2vw, 3rem);
+  font-size: clamp(0.9rem, 1.2vw, 1.3rem);
   font-weight: 300;
-  width: 75%;
-  color: #d9d9d9;
-  text-align: center;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 4%;
 }
 
 .footer-nav-body{
@@ -874,8 +877,8 @@ footer::before{
 }
 
 .nav-item h4{
-  font-size: 1.8rem;
-  color: #d9d9d9;
+  font-size: clamp(1.4rem, 2vw, 2.5rem);
+  color: #fff;
 }
 
 .nav-item ul {
@@ -887,7 +890,13 @@ footer::before{
 }
 
 .nav-item ul li a{
-  color: #d9d9d9;
+  color: #9e9e9e;
+  font-size: clamp(1rem, 1.4vw, 1.8rem);
+  transition: color 0.2s ease-in;
+}
+
+.nav-item ul li a:hover{
+  color: #fff;
 }
 
 .footer-bottom{
@@ -910,6 +919,14 @@ footer::before{
 .footer-icons li a{
   color: #d9d9d9;
   font-size: clamp(1.3rem, 1.4vw, 1.6rem);
+}
+
+.footer-icons li{
+  transition: transform 0.3s linear;
+}
+
+.footer-icons li:hover{
+  transform: translateY(10px);
 }
 .terms{
   width: 100%;
@@ -1275,6 +1292,38 @@ footer::before{
 
   .main-text{
     width: 70%;
+  }
+
+  footer{
+    min-height: 85vh;
+  }
+  
+  .content-container{
+    min-height: 80vh;
+  }
+
+  .footer-nav-head{
+    min-height: 15vh;
+  }
+
+  .footer-nav-head p{
+    width: 100%;
+    padding-left: 0%;
+  }
+
+  .footer-nav{
+    min-height: 55vh;
+  }
+
+  .nav-item{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-item ul{
+    display: flex;
+    gap: 9px;
   }
 }
 
