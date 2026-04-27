@@ -842,15 +842,15 @@ footer::before{
 }
 
 .footer-nav-head h4{
-  font-size: clamp(1.4rem, 3vw, 3.5rem);
-  color: #fff;
+  font-size: clamp(1.4rem, 3vw, 4rem);
+  color: #d9d9d9;
 }
 
 .footer-nav-head p{
-  font-size: clamp(0.8rem, 2vw, 2.5rem);
-  font-weight: 600;
+  font-size: clamp(0.8rem, 2vw, 3rem);
+  font-weight: 300;
   width: 75%;
-  color: #fff;
+  color: #d9d9d9;
   text-align: center;
 }
 
@@ -875,7 +875,7 @@ footer::before{
 
 .nav-item h4{
   font-size: 1.8rem;
-  color: #fff;
+  color: #d9d9d9;
 }
 
 .nav-item ul {
@@ -887,7 +887,7 @@ footer::before{
 }
 
 .nav-item ul li a{
-  color: #fff;
+  color: #d9d9d9;
 }
 
 .footer-bottom{
@@ -908,7 +908,7 @@ footer::before{
 }
 
 .footer-icons li a{
-  color: #fff;
+  color: #d9d9d9;
   font-size: clamp(1.3rem, 1.4vw, 1.6rem);
 }
 .terms{
@@ -917,7 +917,7 @@ footer::before{
   justify-content: flex-start;
   align-items: center;
   gap: 5px;
-  color: #fff;
+  color: #d9d9d9;
 }
 
 /*Here starts responsive design*/
@@ -1001,6 +1001,51 @@ footer::before{
 
   .stats-title{
     width: 30%;
+  }
+
+  .return-top{
+    max-height: 80px;
+  }
+
+  footer{
+    min-height: 55vh;
+  }
+
+  .content-container{
+    min-height: 50vh;
+  }
+
+  .footer-nav{
+    height: 30vh;
+  }
+
+  .footer-nav-head p{
+    width: 35%;
+  }
+
+  .footer-nav-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .footer-icons{
+    width: 50%;
+  }
+
+  .terms{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 4%;
+  }
+
+  .footer-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
   }
 }
 
