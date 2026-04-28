@@ -1,0 +1,87 @@
+/* Here goes the style for the contact form*/
+
+
+/* Questrial Font */
+
+
+@font-face{
+  font-family: 'Questrial';
+  src: url('../fonts/Questrial-Regular.otf') format('opentype')
+}
+
+@font-face{
+    font-family: 'Poppins Bold';
+    src: url(../fonts/Poppins_fonts/Poppins-Bold.ttf) format('opentype')
+}
+
+@font-face{
+    font-family: 'Poppins Medium';
+    src: url(../fonts/Poppins_fonts/Poppins-Medium.ttf) format('opentype')
+}
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  font-family: 'Questrial', sans-serif;
+}
+
+.container{
+    min-height: 100vh;
+    background-image: url(../images/HEADER-img.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.589);
+    z-index: 1;
+}
+
+.contact-informations{
+    width: 100%;
+    min-height: 80vh;
+    z-index: 3;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding-left: 5%;
+    flex-direction: column;
+}
+
+.contact-informations h2{
+    color: #fff;
+    font-size: clamp(2rem, 2.5vw, 2.8rem);
+    font-family: 'Poppins Bold';
+}
+
+.contact-informations p{
+    font-size: clamp(0.9rem, 1.2vw, 1.8rem);
+    width: 80%;
+    color: #fff;
+    font-family: 'Poppins Medium';
+}
+

@@ -3,8 +3,6 @@
 
 /*fonts*/
 
-/*Poppins font*/
-
 @font-face{
   font-family: 'Questrial';
   src: url('../fonts/Questrial-Regular.otf') format('opentype')
@@ -810,7 +808,6 @@ footer::before{
   z-index: 2;
   flex-direction: column;
   background-color: #00000080;
-  border-radius: 15px;
 }
 
 .footer-title{
