@@ -68,12 +68,13 @@ body, html {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
-    padding-left: 5%;
     flex-direction: column;
 }
 
 .contact-informations h2{
     color: #fff;
+    text-align: center;
+    width: 100%;
     font-size: clamp(2rem, 2.5vw, 2.8rem);
     font-family: 'Poppins Bold';
 }
@@ -81,7 +82,103 @@ body, html {
 .contact-informations p{
     font-size: clamp(0.9rem, 1.2vw, 1.8rem);
     width: 80%;
+    margin: 0 auto;
     color: #fff;
+    
     font-family: 'Poppins Medium';
 }
+
+.contact-icons{
+    background-color: #000;
+    z-index: 3;
+    width: 90%;
+    border-radius: 50px;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.general-icons{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.general-icons ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    gap: 10px;
+}
+
+.general-icons ul li a{
+    color: #000;
+    font-size: clamp(1.3rem, 1.5vw, 1.6rem);
+    background-color: #ffffff;
+    padding: 15px 15px;
+    border-radius: 50px;
+}
+
+.modes{
+    background-color: rgb(255, 255, 255);
+    width: 48%;
+    height: 90%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.modes ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container{
+    transform: translateX(2px);
+    background-color: black;
+    color: #fff;
+    width: 85px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: transform 0.3s linear;
+}
+
+#container.active{
+    transform: translateX(95px);
+    background-color: #d8d8d8;
+    color: #000;
+}
+
+#dark-icon{
+    opacity: 1;
+    position: absolute;
+}
+
+#dark-icon.hide{
+    opacity: 0;
+    color: #000;
+}
+
+#light-icon{
+    position: absolute;
+    opacity: 0;
+}
+
+#light-icon.show{
+    opacity: 1;
+}
+
+
+
+
+
+
 

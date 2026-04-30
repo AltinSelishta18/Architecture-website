@@ -23,7 +23,40 @@
             <p>Arkitektura është më shumë se ndërtim – është krijimi i hapësirave që reflektojnë stilin, nevojat dhe vizionin tuaj. Qoftë një projekt rezidencial apo komercial, ne i qasemi çdo ideje me përkushtim, kreativitet dhe vëmendje të veçantë ndaj detajeve, duke balancuar estetikën me funksionalitetin.</p>
             <p>Plotësoni formularin më poshtë dhe ndani me ne informacionin rreth projektit tuaj. Ekipi ynë do t’ju kontaktojë për të diskutuar mundësitë dhe për të propozuar një zgjidhje të personalizuar që i përgjigjet kërkesave dhe objektivave tuaja.</p>
         </div>
+
+        <div class="contact-icons">
+            <div class="general-icons">
+                <ul>
+                    <li><a href=""><i class="ri-home-4-line"></i></a></li>
+                    <li><a href=""><i class="ri-file-list-line"></i></a></li>
+                    <li><a href=""><i class="ri-calculator-fill"></i></a></li>
+                </ul>
+            </div>
+            <div class="modes">
+                <ul>
+                    <li id="container">
+                        <i id="dark-icon" class="ri-moon-fill"></i>
+                        <i id="light-icon" class="ri-sun-fill"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 
+
+    <script>
+       const container = document.querySelector("#container");
+       const dark_icon = document.querySelector("#dark-icon");
+       const light_icon = document.querySelector("#light-icon");
+
+       container.addEventListener("click", function(){
+            container.classList.toggle("active");
+            dark_icon.classList.toggle("hide");
+            light_icon.classList.toggle("show");
+       })
+
+
+
+    </script>
 </body>
 </html>
