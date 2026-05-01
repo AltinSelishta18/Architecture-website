@@ -41,21 +41,121 @@
                 </ul>
             </div>
         </div>
+        <form id="formular" action="https://formspree.io/f/mvzloben" method="POST">
+            <div class="formular-title">
+                <h2>Let's Create Together.</h2>
+            </div>
+            <div id="data-container" class="data-container">
+                <input type="text" name="Name" id="Name" placeholder=" Your Name..." autocomplete="off">
+                <input type="text" name="Surname" id="S-Name" placeholder="Your Surname..." autocomplete="off">
+                <input type="text" name="FullName" id="p-number" placeholder="Your Phone Number..." autocomplete="off">
+                <input type="text" name="FullName" id="Email" placeholder="Your Email..." autocomplete="off">
+                <textarea name="help" id="helpMsg" placeholder="Need Help ?" autocomplete="off"></textarea>
+                <button type="submit" id="submitBtn">Submit</button>
+
+                <!--Formular validation erro handling code-->
+                <div id="Error" class="Error_modal">
+                    <div class="error-head">
+                        <div class="error-title">
+                            <i class="ri-close-circle-fill"></i>
+                            <h3>Error Detected</h3>
+                        </div>
+                        <div class="close-modal">
+                            <i id="modal-close" class="ri-close-line"></i>
+                        </div>
+                    </div>
+                    <div class="error-body">
+                        <h5 id="Error_text"></h5>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
 
 
     <script>
+
+        // Here is created the dark/light mode theme logic
        const container = document.querySelector("#container");
        const dark_icon = document.querySelector("#dark-icon");
        const light_icon = document.querySelector("#light-icon");
-
+       const data_container = document.querySelector("#data-container");
        container.addEventListener("click", function(){
             container.classList.toggle("active");
             dark_icon.classList.toggle("hide");
             light_icon.classList.toggle("show");
+            data_container.classList.toggle("change")
        })
 
+       // Here goes the validation of the contact formular
 
+       const form = document.querySelector("#formular");
+       const Name = document.querySelector("#Name");
+       const s_name = document.querySelector("#S-Name");
+       const p_number = document.querySelector("#p-number");
+       const Email = document.querySelector("#Email");
+       const helpMsg = document.querySelector("#helpMsg");
+       const Error_modal = document.querySelector("#Error");
+       const error_hide = document.querySelector("#modal-close");
+       const Error_text = document.querySelector("#Error_text");
+
+       // Here will be declared regex codes
+
+       const nameRegex = /^[A-Za-z\s-]{2,50}$/;
+       const surnameRegex = /^[A-Za-z]{2,30}$/;
+       const phoneRegex = /^\+?\d{8,15}$/;
+       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+       form.addEventListener("submit", function(e){
+        console.log("Formular works")
+
+        e.preventDefault();
+
+        if(Name.value.trim() === "" || s_name.value.trim() === "" || p_number.value.trim() === "" || Email.value.trim() === ""){
+            Error_modal.style.display = "block";
+            Error_text.textContent = "Please review your information and try again. (Fill the inputs)";
+
+            // This setTimeout hides the Error Modal automatically after 7 seconds appeared
+            setTimeout(() =>{
+                Error_modal.style.display = "none";
+            }, 7000)
+
+            return;
+        }
+
+            // Name validation check
+            if(!nameRegex.test(Name.value)){
+                Error_modal.style.display = "block";
+                Error_text.textContent = "Please review your information and try again. (Invalid First Name)";
+                return;
+            }
+
+            // Surname validation check
+            if(!surnameRegex.test(s_name.value)){
+                Error_modal.style.display = "block";
+                Error_text.textContent = "Please review your information and try again. (Invalid Surname)";
+                return;
+            }
+
+            if(!phoneRegex.test(p_number.value)){
+                Error_modal.style.display = "block";
+                Error_text.textContent = "Please review your information and try again. (Invalid Phone Number)";
+                return;
+            }
+
+            if(!emailRegex.test(Email.value)){
+                Error_modal.style.display = "block";
+                Error_text.textContent = "Please review your information and try again. (Invalid Email)";
+                return;
+            }
+
+            form.submit();
+       })
+
+       // This event Closes the Error Modal
+       error_hide.addEventListener("click", function(){
+            Error_modal.style.display = "none";
+       })
 
     </script>
 </body>
