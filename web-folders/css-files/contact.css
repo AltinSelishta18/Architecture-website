@@ -123,8 +123,14 @@ body, html {
     background-color: #ffffff;
     padding: 15px 15px;
     border-radius: 50px;
+    transition: background-color 0.2s linear, color 0.4s linear, border 0.6s linear;
 }
 
+.general-icons ul li a:hover{
+    color: #fff;
+    background-color: #000;
+    border: 2px solid rgb(255, 255, 255);
+}
 .modes{
     background-color: rgb(255, 255, 255);
     width: 48%;
@@ -276,6 +282,13 @@ body, html {
     background-color: #ffffff;
     color: #000;
     border-radius: 15px;
+    font-family: "Poppins Medium";
+    border: 1px solid black;
+    transition: background-color 0.3s linear;
+}
+
+.data-container button:hover{
+    background-color: #ffffff79;
 }
 
 .Error_modal{
@@ -357,11 +370,11 @@ body, html {
     .contact-icons{
         margin: 0 auto;
     }
-
+    
     #formular{
         width: 100%;
         margin-right: 4%;
-        max-width: 700px;
+        max-width: 550px;
     }
 
     #container{
@@ -371,6 +384,20 @@ body, html {
 
     #container.active{
         transform: translateX(170px);
+    }
+}
+
+@media(min-width: 1024px){
+    #container{
+        height: 53px;
+        width: 100px;
+    }
+    .contact-icons{
+        height: 10vh;
+    }
+
+    #container.active{
+        transform: translateX(208px);
     }
 }
 
