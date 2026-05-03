@@ -66,7 +66,7 @@ body{
     font-weight: 400;
     width: 90%;
     line-height: 35px;
-    font-size: clamp(2rem, 3vw, 3.5rem);
+    font-size: clamp(2rem, 3.5vw, 5rem);
 }
 
 .services-text{
@@ -85,10 +85,9 @@ body{
 
 .services-boxes{
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
     gap: 25px;
 }
 
@@ -171,4 +170,54 @@ body{
     color: #fff;
     font-size: 1.1rem;
     font-family: "Questrial";
+}
+
+@media(min-width:768px){
+    .services-boxes{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+        margin: 0 auto;
+    }
+
+    .box{
+        width: 95%;
+        aspect-ratio: 1 / 1;
+    }
+}
+
+@media(min-width:1024px){
+    .services-boxes{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+        align-content: center;
+    }
+
+    .box{
+        width: 90%;
+        height: 90%;
+    }
+
+    #first-box{
+        margin-top: 0%;
+    }
+
+    #last-box{
+        margin-bottom: 0%;
+    }
+
+    .services-header-sllogan{
+        width: 50%;
+    }
+
+    .services-header-sllogan h1{
+        line-height: 50px;
+    }
+
+    .services-text{
+        margin: 0 auto;
+        width: 65%;
+        text-align: justify;
+    }
 }
