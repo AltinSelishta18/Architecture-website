@@ -8,6 +8,16 @@
   src: url('../fonts/Questrial-Regular.otf') format('opentype')
 }
 
+@font-face{
+    font-family: 'Poppins Bold';
+    src: url(../fonts/Poppins_fonts/Poppins-Bold.ttf) format('opentype')
+}
+
+@font-face{
+    font-family: 'Poppins Medium';
+    src: url(../fonts/Poppins_fonts/Poppins-Medium.ttf) format('opentype')
+}
+
 
 /* ================= HEADER ================= */
 * {
@@ -177,7 +187,6 @@ nav#nav-menu.active {
   align-items: flex-end;
   padding: 0 40px;
   z-index: 2;
-  animation: header-sllogan 0.7s forwards;
 }
 
 /* SLOGANI poshtë në qoshe majte */
@@ -185,18 +194,6 @@ nav#nav-menu.active {
   font-size: 2.5rem;
   font-weight: 600;
   max-width: 50%;
-}
-
-@keyframes header-sllogan{
-  0%{
-    transform: translateY(0px);
-  }
-  50%{
-    transform: translateY(150px);
-  }
-  100%{
-    transform: translateY(0px);
-  }
 }
 
 /* CTA BUTTON poshtë në qoshe djathtë */

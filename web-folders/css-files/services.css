@@ -1,0 +1,16 @@
+/* Here goes CSS style for the file services.html*/
+
+@font-face{
+  font-family: 'Questrial';
+  src: url('../fonts/Questrial-Regular.otf') format('opentype')
+}
+
+@font-face{
+    font-family: 'Poppins Bold';
+    src: url(../fonts/Poppins_fonts/Poppins-Bold.ttf) format('opentype')
+}
+
+@font-face{
+    font-family: 'Poppins Medium';
+    src: url(../fonts/Poppins_fonts/Poppins-Medium.ttf) format('opentype')
+}
