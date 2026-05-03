@@ -49,11 +49,11 @@ body{
     background-color: #fff;
     min-height: 100vh;
     width: 100%;
+    position: relative;
 }
 
 .services-header-sllogan{
     width: 100%;
-    background-color: red;
     height: 20vh;
     display: flex;
     justify-content: flex-start;
@@ -84,7 +84,6 @@ body{
 }
 
 .services-boxes{
-    background-color: green;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -96,6 +95,50 @@ body{
 .box{
     width: 90%;
     height: 35vh;
+    position: relative;
+}
+
+.box img{
+    width: 100%;
+    height: 100%;
+}
+
+.overlay-text{
+    content: "";
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    background: linear-gradient(to top, #000000bb, #0000001c);
+}
+
+.service-number{
+    width: 100%;
+    z-index: 2;
+    padding: 4% 4%;
+}
+
+.service-number h3{
+    font-family: "Poppins Medium";
+    color: #fff;
+    font-size: clamp(1.4rem, 1.6vw, 2rem);
+}
+
+.service-type{
+    width: 100%;
+    z-index: 2;
+    padding: 4% 4%;
+}
+
+.service-type h2{
+    font-family: "Poppins Light";
+    color: #fff;
+    font-size: clamp(1.4rem, 1.6vw, 2rem);
 }
 
 #first-box{
@@ -104,4 +147,28 @@ body{
 
 #last-box{
     margin-bottom: 4%;
+}
+
+.service-cta-button{
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0% 5%;
+    height: 10vh;
+}
+
+.service-cta-button button{
+    padding: 20px 40px;
+    border-radius: 5px;
+    background-color: #000;
+    border-color: transparent;
+}
+
+.service-cta-button button a{
+    color: #fff;
+    font-size: 1.1rem;
+    font-family: "Questrial";
 }
