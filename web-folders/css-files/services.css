@@ -68,3 +68,40 @@ body{
     line-height: 35px;
     font-size: clamp(2rem, 3vw, 3.5rem);
 }
+
+.services-text{
+    font-family: "Questrial";
+    width: 95%;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.services-text p{
+    font-size: clamp(1.2rem, 2.4vw, 3.1rem);
+}
+
+.services-boxes{
+    background-color: green;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.box{
+    width: 90%;
+    height: 35vh;
+}
+
+#first-box{
+    margin-top: 4%;
+}
+
+#last-box{
+    margin-bottom: 4%;
+}
