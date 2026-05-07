@@ -1,0 +1,42 @@
+const projects = [
+    {
+    id: 1,
+    title: "Villa Horizon",
+    type: "residential",
+    location: "Prishtina",
+    year: 2024
+  },
+  {
+    id: 2,
+    title: "Villa Madrid",
+    type: "residential",
+    location: "Madrid",
+    year: 2024
+  },
+  {
+    id: 3,
+    title: "Villa Paris",
+    type: "residential",
+    location: "Paris",
+    year: 2024
+  },
+]
+
+    const category = document.getElementById("category").value;
+    const location = document.getElementById("location").value;
+    const Years = document.getElementById("Years").value;
+
+
+function FilterProject(ARR,category, location, Years){
+   
+   const filterProjects = ARR.filter(project => {
+    return (
+        ( category === "All" || project.type.toLowerCase().includes(category.toLowerCase())) &&
+        ( location === "All" || project.location.toLowerCase().includes(location.toLowerCase())) &&
+        (Years === "All" || project.year === Number(Years))
+    );
+   })
+
+   return filterProjects
+
+}
