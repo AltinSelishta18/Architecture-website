@@ -6,14 +6,98 @@
     <title>BS Architecture: Projects</title>
 
     <!--CSS link-->
-    <link rel="stylesheet" href="../css-files/index.css">
+    <link rel="stylesheet" href="../css-files/projects.css">
 
     <!--AOS animations link-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!--Fontavesome link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Agdasima:wght@400;700&family=Anta&family=Audiowide&family=Bebas+Neue&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bungee&family=Content:wght@400;700&family=Convergence&family=Cormorant:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dancing+Script:wght@400..700&family=Darker+Grotesque:wght@300..900&family=Geostar+Fill&family=Gidugu&family=Great+Vibes&family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=Italiana&family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Lobster&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=New+Amsterdam&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Oxanium:wght@200..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Petit+Formal+Script&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prosto+One&family=Questrial&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rationale&family=Red+Rose:wght@300..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&family=Russo+One&family=Saira:ital,wght@0,100..900;1,100..900&family=Smooch&family=Sora:wght@100..800&family=Syncopate:wght@400;700&family=Train+One&family=Unbounded:wght@200..900&family=WDXL+Lubrifont+TC&family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
+
     <!--Icons External Link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+
+    <header>
+            <div class="projects">
+                <h3>BS</h3>
+
+                <div class="menu-icon" id="hamburger">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <nav class="projects-nav">
+                <ul class="links">
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">SERVICES</a></li>
+                    <li><a href="">CALCULATE</a></li>
+                </ul>
+
+                <form action="">
+                    <!--Select project by the type-->
+                    <select name="category" id="category">
+                        <option value="">All categories</option>
+                        <option value="INTERIOR">INTERIOR</option>
+                        <option value="EXTERIOR">EXTERIOR</option>
+                        <option value="COMMERCIAL">COMMERCIAL</option>
+                        <option value="RESIDENTIAL">RESIDENTIAL</option>
+                    </select>
+                    <!--Select project by the location-->
+                    <select name="location" id="location">
+                        <option value="">All locations</option>
+                        <option value="Paris">Paris</option>
+                        <option value="Madrid">Madrid</option>
+                        <option value="Berlin">Berlin</option>
+                        <option value="Lisbona">Lisbona</option>
+                        <option value="London">London</option>
+                        <option value="Washington">Washington, D.C</option>
+                        <option value="Rome">Italy</option>
+                        <option value="Pristina">Pristina</option>
+                    </select>
+                    <!--Select project by the year-->
+                    <select name="year" id="year">
+                        <option value="">All Years</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                    </select>
+                    <button>Search</button>
+                </form>
+            </nav>
+
+            <div class="header-content">
+                <div class="content-preTitle">
+                    <h5>OUR WORK</h5>
+                </div>
+                <div class="content-title">
+                    <h1>PROJECTS</h1>
+                </div>
+                <div class="content-prg">
+                    <p> 
+                        A curated selection of our architectural works, showcasing modern design and functional spaces.
+                        Each project reflects our focus on detail, innovation, and timeless aesthetics.
+                    </p>
+                </div>
+                <div class="content-button">
+                    <a href="">
+                        CALCULATE
+                        <i class="ri-arrow-right-long-line"></i>
+                    </a>
+                </div>
+            </div>
+
+    </header>
+
+    <script src="../JS-files/projects.js"></script>
 </body>
 </html>
