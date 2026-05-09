@@ -2,7 +2,7 @@
 
 /*fonts*/
 
-@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Agdasima:wght@400;700&family=Anta&family=Audiowide&family=Bebas+Neue&family=Bungee&family=Content:wght@400;700&family=Convergence&family=Cormorant:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dancing+Script:wght@400..700&family=Darker+Grotesque:wght@300..900&family=Geostar+Fill&family=Gidugu&family=Great+Vibes&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=Italiana&family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Lobster&family=Manrope:wght@200..800&family=New+Amsterdam&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Oxanium:wght@200..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Petit+Formal+Script&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prosto+One&family=Questrial&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rationale&family=Red+Rose:wght@300..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&family=Russo+One&family=Saira:ital,wght@0,100..900;1,100..900&family=Smooch&family=Sora:wght@100..800&family=Syncopate:wght@400;700&family=Train+One&family=Unbounded:wght@200..900&family=WDXL+Lubrifont+TC&family=Zen+Tokyo+Zoo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Agdasima:wght@400;700&family=Anta&family=Audiowide&family=Bebas+Neue&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bungee&family=Content:wght@400;700&family=Convergence&family=Cormorant:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dancing+Script:wght@400..700&family=Darker+Grotesque:wght@300..900&family=Geostar+Fill&family=Gidugu&family=Great+Vibes&family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=Italiana&family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Lobster&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=New+Amsterdam&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Oxanium:wght@200..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Petit+Formal+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prosto+One&family=Questrial&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rationale&family=Red+Rose:wght@300..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&family=Russo+One&family=Saira:ital,wght@0,100..900;1,100..900&family=Smooch&family=Sora:wght@100..800&family=Syncopate:wght@400;700&family=Train+One&family=Unbounded:wght@200..900&family=WDXL+Lubrifont+TC&family=Zen+Tokyo+Zoo&display=swap');
 
 @font-face{
   font-family: 'Questrial';
@@ -28,6 +28,18 @@
     font-family: 'Poppins Regular';
     src: url(../fonts/Poppins_fonts/Poppins-Regular.ttf) format('opentype')
 }
+
+@font-face{
+    font-family: 'ClashDisplay Light';
+    src: url(../fonts/ClashDisplay_Complete/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Light.ttf) format('opentype')
+}
+
+@font-face{
+    font-family: 'ClashDisplay Medium';
+    src: url(../fonts/ClashDisplay_Complete/ClashDisplay_Complete/Fonts/WEB//fonts/ClashDisplay-Regular.ttf) format('opentype')
+}
+
+
 
 
 
@@ -195,7 +207,7 @@ form button{
     width: 100%;
     color: #fff;
     font-size: clamp(1.8rem, 2.8vw, 3rem);
-     font-family: "Bodoni Moda", serif;
+    font-family: 'ClashDisplay Light';
 }
 
 .content-prg{
@@ -247,6 +259,47 @@ form button{
 
 .content-button a:hover i{
     transform: translateX(30px);
+}
+
+.projects-container{
+    background-color: #f8f5ef;
+    min-height: 100vh;
+}
+
+.project-container-preTitle{
+    width: 100%;
+    height: 9vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0% 5%;
+}
+
+.project-container-preTitle h5{
+    font-size: clamp(1.3rem, 1.6vw, 2rem);
+    font-family: 'ClashDisplay Light';
+    position: relative;
+}
+
+.project-container-preTitle h5::after{
+    content: '';
+    position: absolute;
+    right: -45%;
+    top: 50%;
+    height: 2px;
+    width: 80px;
+    max-width: 80px;
+    background-color: #000;
+}
+
+.projects-container-title{
+    height: 12vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0% 5%;
+    font-size: clamp(1.2rem, 2.5vw, 3.5rem);
+    font-family: "ClashDisplay Medium";
 }
 
 /* Responsive Design for the projects page*/
