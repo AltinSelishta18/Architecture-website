@@ -4,10 +4,10 @@ export const projects = [
   {
     id: 1,
     title: "Modern Interior",
-    type: "interior",
+    type: "Interior",
     location: "Prishtinë",
     year: 2024,
-    img: "/web-folder/images/projects-interior.jpg",
+    img: "/web-folders/images/projects-interior.jpg",
     alt: "Interior architecture project",
     content: "Modern minimalist interior architecture."
   },
@@ -15,7 +15,7 @@ export const projects = [
   {
     id: 2,
     title: "Commercial Center",
-    type: "commercial",
+    type: "Commercial",
     location: "Gjilan",
     year: 2023,
     img: "/web-folders/images/projects-commercial.jpg",
@@ -26,7 +26,7 @@ export const projects = [
   {
     id: 3,
     title: "Shopping Mall",
-    type: "commercial",
+    type: "Commercial",
     location: "Ferizaj",
     year: 2022,
     img: "/web-folders/images/shopping-mall-img.jpg",
@@ -37,7 +37,7 @@ export const projects = [
   {
     id: 4,
     title: "Urban Planning",
-    type: "urban",
+    type: "Urban",
     location: "Prizren",
     year: 2024,
     img: "/web-folders/images/urban-planning-img.jpg",
@@ -59,11 +59,44 @@ export const projects = [
   {
     id: 6,
     title: "Interior Space",
-    type: "interior",
+    type: "Interior",
     location: "Kamenicë",
     year: 2023,
     img: "/web-folders/images/service-interior.jpg",
     alt: "Luxury interior space",
     content: "Elegant residential interior."
+  },
+
+  {
+    id: 7,
+    title: "Building Center",
+    type: "Commercial",
+    location: "Gjilan",
+    year: 2021,
+    img: "/web-folders/images/BUILDING-img.jpg",
+    alt: "Museum Exterior Design",
+    content: "Elegant museum architecture."
+  },
+
+  {
+    id: 8,
+    title: "Hospital of Tirana",
+    type: "Commercial",
+    location: "Tirana",
+    year: 2026,
+    img: "/web-folders/images/feature-img-1.jpg",
+    alt: "Tirana Hospital",
+    content: "Advanced healthcare design."
+  },
+
+  {
+    id: 7,
+    title: "Shopping Mall Roof",
+    type: "Interior",
+    location: "Skopje",
+    year: 2026,
+    img: "/web-folders/images/nav-img.jpg",
+    alt: "Shopping Mall Roof",
+    content: "Sleek structural design.."
   }
 ];
