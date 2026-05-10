@@ -15,9 +15,9 @@ hamburger.addEventListener("click", function(){
 const Type = document.getElementById("search"); 
 const PROJECTS = document.getElementById("PROJECTS");
 
-function project_filter(arr, Type){
+function project_filter(arr, value){
     const filter_project = arr.filter(project =>
-        (Type === "All" || project.type.toLowerCase().includes(Type.toLowerCase()))   
+        (value === "All" || project.type.toLowerCase().includes(value.toLowerCase()))   
     );
 
     return filter_project
@@ -38,9 +38,12 @@ function Render_data(arr){
         project_image.classList.add("project_img");
         project_image.src = item.img;
 
+
+        // Project_info is the container where will be the project's basic info
         const project_info = document.createElement("div");
         project_info.classList.add("project-info")
 
+        //Project_info_left will contain the type and the title of the project
         const project_info_left = document.createElement("div");
         project_info_left.classList.add("project-info-left")
 
@@ -50,6 +53,7 @@ function Render_data(arr){
         const project_info_left_title = document.createElement("h2");
         project_info_left_title.textContent = item.title;
 
+        // project_info_right will contain the year when the project was created
         const project_info_right = document.createElement("div");
         project_info_right.classList.add("project-info-right")
 
@@ -76,6 +80,17 @@ Type.addEventListener("change", function(){
         const value = Type.value;
 
         const filtered = project_filter(projects, value);
+
+        PROJECTS.innerHTML = "";
+
+        if(filtered.length === 0){
+            const noResult =  document.createElement("p");
+            noResult.classList.add("noResult")
+            noResult.textContent = "Nuk ka asnjë Rezultat...";
+
+            PROJECTS.appendChild(noResult);
+            return;
+        }
 
         Render_data(filtered)
 })
