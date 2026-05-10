@@ -264,10 +264,33 @@ header::before{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex-direction: column;
     padding: 0% 5%;
+    gap: 15px;
     font-size: clamp(1.2rem, 2.5vw, 3.5rem);
     font-family: "ClashDisplay Medium";
 }
+
+.projects-container-title input{
+    width: 65%;
+    height: clamp(50px, 25%, 80px);
+    padding: 3% 3%;
+    border-radius: 25px;
+}
+
+.noResult{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 0%;
+    width: 100%;
+    padding: 3% 3%;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    font-family: "ClashDisplay Medium";
+    color: #1a1919;
+}
+
 
 #PROJECTS{
     display: grid;
@@ -275,7 +298,7 @@ header::before{
     grid-template-columns: repeat(1, 1fr);
     place-items: center;
     gap: 15px;
-    margin: 4% auto;
+    margin: 10% auto;
 }
 
 .project_box{
@@ -301,19 +324,6 @@ header::before{
     height: 25%;
     width: 100%;
     display: flex;
-}
-
-.noResult{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    left: 110%;
-    width: 100%;
-    padding: 3% 3%;
-    font-size: 1.6rem;
-    font-family: "ClashDisplay Medium";
-    color: #1a1919;
 }
 
 .project-info-left{
@@ -378,16 +388,15 @@ header::before{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-direction: row;
     }
 
     .projects-container-title input{
         width: 20%;
-        height: 8vh;
-        padding-left: 1%;
+        border: 1px solid black;
+        padding: 0% 2%;
+        font-family: "ClashDisplay Medium";
         border-radius: 25px;
-        border: 0.5px solid black;
-        font-family: "Poppins Regular";
-        transition: transform 0.3s linear;
     }
 
     .projects-container-title input:focus{
@@ -402,6 +411,11 @@ header::before{
         place-items: center;
         gap: 15px;
         margin: 4% auto;
+    }
+
+    .noResult{
+        position: relative;
+        left: 100%;
     }
 }
 
