@@ -99,6 +99,7 @@ header::before{
     align-items: center;
     flex-direction: column;
     gap: 5px;
+    padding: 2% 0%;
 }
 
 .menu-icon span{
@@ -123,19 +124,17 @@ header::before{
     position: absolute;
     right: 0;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    display: none;
     height: 92vh;
     gap: 25px;
-    display: none;
     z-index: 99;
 }
 
 .projects-nav.showMenu{
     display: flex;
-    z-index: 51;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .links{
@@ -150,39 +149,7 @@ header::before{
 .links li a{
     color: #fff;
     font-family: "Poppins Medium";
-    font-size: clamp(1.7rem, 2.5vw, 3.5rem);
-}
-
-form{
-    height: 45vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    gap: 25px;
-}
-
-select{
-    border-radius: 0px;
-    width: 45%;
-    height: 15%;
-    font-size: 1rem;
-    background-color: rgba(219, 219, 219, 0.199);
-    color: #fff;
-    padding: 0% 3%;
-    font-family: "Poppins Medium";
-}
-
-form button{
-    width: 45%;
-    height: 15%;
-    border-radius: 8px;
-    font-family: "Poppins Medium";
-    color: #fff;
-    background-color: transparent;
-    font-size: 1.1rem;
-    border: 1px solid white;
+    font-size: clamp(2rem, 3vw, 4.5rem);
 }
 
 .header-content{
@@ -302,20 +269,30 @@ form button{
     font-family: "ClashDisplay Medium";
 }
 
+#PROJECTS{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+}
+
+.projects-img{
+    width: 250px;
+    height: 250px;
+}
+
 /* Responsive Design for the projects page*/
 
 @media(min-width: 1024px){
     .projects-nav{
+        display: none;
+    }
+
+    .projects-nav.showMenu{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: row;
         gap: 15px;
-        display: none
-    }
-
-    .projects-nav.showMenu{
-        display: flex;
     }
 
     .projects-nav .links a:hover{
@@ -326,4 +303,31 @@ form button{
         background-color: #000000b0;
     }
 
+    .project-container-preTitle{
+        margin-top: 2%;
+    }
+
+    .projects-container-title{
+        margin-top: 1%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .projects-container-title input{
+        width: 20%;
+        height: 8vh;
+        padding-left: 1%;
+        border-radius: 25px;
+        border: 0.5px solid black;
+        font-family: "Poppins Regular";
+        transition: transform 0.3s linear;
+    }
+
+    .projects-container-title input:focus{
+        outline: none;
+        transform: scale(1.05);
+    }
+
 }
+

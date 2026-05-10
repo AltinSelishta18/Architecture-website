@@ -38,41 +38,6 @@
                     <li><a href="services.html">SERVICES</a></li>
                     <li><a href="">CONTACT</a></li>
                 </ul>
-
-                <form action="">
-                    <!--Select project by the type-->
-                    <select name="category" id="category">
-                        <option value="">All categories</option>
-                        <option value="INTERIOR">INTERIOR</option>
-                        <option value="EXTERIOR">EXTERIOR</option>
-                        <option value="COMMERCIAL">COMMERCIAL</option>
-                        <option value="RESIDENTIAL">RESIDENTIAL</option>
-                    </select>
-                    <!--Select project by the location-->
-                    <select name="location" id="location">
-                        <option value="">All locations</option>
-                        <option value="Paris">Paris</option>
-                        <option value="Madrid">Madrid</option>
-                        <option value="Berlin">Berlin</option>
-                        <option value="Lisbona">Lisbona</option>
-                        <option value="London">London</option>
-                        <option value="Washington">Washington, D.C</option>
-                        <option value="Rome">Italy</option>
-                        <option value="Pristina">Pristina</option>
-                    </select>
-                    <!--Select project by the year-->
-                    <select name="year" id="year">
-                        <option value="">All Years</option>
-                        <option value="2020">2020</option>
-                        <option value="2021">2021</option>
-                        <option value="2022">2022</option>
-                        <option value="2023">2023</option>
-                        <option value="2024">2024</option>
-                        <option value="2025">2025</option>
-                        <option value="2026">2026</option>
-                    </select>
-                    <button>Search</button>
-                </form>
             </nav>
 
             <div class="header-content">
@@ -105,9 +70,13 @@
         </div>
         <div class="projects-container-title">
             <h2>WHERE VISION BECOMES<br>FORM</h2>
+            <input type="text" name="search" id="search" placeholder="Search Project (By Type)" autocomplete="off">
         </div>
+
+        <!--here will be displayed the projects-->
+        <div id="PROJECTS"></div>
     </section>
 
-    <script src="../JS-files/projects.js"></script>
+    <script type="module" src="../JS-files/projects.js"></script>
 </body>
 </html>
