@@ -110,6 +110,7 @@ const project_Modal = document.createElement("div");
 project_Modal.classList.add("project_Modal")
 document.body.appendChild(project_Modal)
 
+
 PROJECTS.addEventListener("click", function(e){
     const box = e.target.closest(".project_box");
     
@@ -123,24 +124,57 @@ PROJECTS.addEventListener("click", function(e){
     <div class="modal_content">
         <div class="project_detail_img">
             <img src="${SelectedProject.img}" alt="${SelectedProject.alt}">
+           <button class="remove_modal"><i class="ri-close-line"></i></button>
         </div>
         <div class="project-detail-info">
             <div class="Project-detail-title">
                 <h5>TITLE</h5>
                 <h2>${SelectedProject.title}</h2>
             </div>
-        </div>
-        <div class="project-detail-text">
+             <div class="project-detail-text">
             <h5>CONTENT</h5>
             <p>${SelectedProject.content}</p>
         </div>
+        <hr>
+        <div class="project_detail_extraInfo">
+                <div class="project-details-box">
+                    <div class="project-details-box-title">
+                        <h5>TYPE<h5>
+                    </div>
+                    <div class="project-details-box-body">
+                        <i class="ri-home-4-line"></i>
+                        <p>${SelectedProject.type}</p>
+                    </div>
+                </div>
+                <div class="project-details-box">
+                    <div class="project-details-box-title">
+                        <h5>LOCATION</h5>
+                    </div>
+                    <div class="project-details-box-body">
+                        <i class="ri-map-pin-line"></i>
+                        <p>${SelectedProject.location}</p>
+                    </div>
+                </div>
+                <div class="project-details-box">
+                    <div class="project-details-box-title">
+                        <h5>YEAR<h5>
+                    </div>
+                    <div class="project-details-box-body">
+                        <i class="ri-calendar-2-fill"></i>
+                        <p>${SelectedProject.year}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     `
+    project_Modal.classList.add("showModal");
 
-    project_Modal.classList.toggle("showModal");
+    const remove_modal = document.querySelector(".remove_modal");
 
+    remove_modal.addEventListener("click", function(){
+        project_Modal.classList.remove("showModal");
+    })
 })
-
-
 
 

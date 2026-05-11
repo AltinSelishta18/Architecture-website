@@ -366,7 +366,7 @@ header::before{
     transform: translate(-50%, -50%);
     margin: 0 auto;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: none;
 }
 .project_Modal.showModal{
@@ -384,6 +384,17 @@ header::before{
 .project_detail_img{
     width: 100%;
     height: 35vh;
+    position: relative;
+}
+
+.remove_modal{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    padding: 10px 15px;
+    background-color: #f8f5ef5d;
+    border-radius: 0px;
+    color: #fff;
 }
 
 .project_detail_img img{
@@ -397,7 +408,7 @@ header::before{
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    gap: 10px;
+    border: 1px solid black;
 }
 
 .Project-detail-title{
@@ -450,7 +461,50 @@ header::before{
     font-size: clamp(1.2rem, 1.4vw, 1.6rem);
 }
 
-.project-detail-text
+.project_detail_extraInfo{
+    width: 100%;
+    height: 25vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+}
+
+.project-details-box{
+    width: 60%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.project-details-box-title{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+    font-family: "ClashDisplay Light";
+    color: #7a7a7a;
+}
+
+.project-details-box-body{
+    height: 85%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.project-details-box-body i{
+    font-size: clamp(1.2rem, 1.5vw, 1.7rem);
+}
+
+.project-details-box-body p{
+    font-family: "ClashDisplay Medium";
+    font-size: clamp(1.1rem, 1.5vw, 1.8rem);
+}
 
 
 /* Responsive Design for the projects page*/
