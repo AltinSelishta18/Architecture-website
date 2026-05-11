@@ -36,7 +36,12 @@
 
 @font-face{
     font-family: 'ClashDisplay Medium';
-    src: url(../fonts/ClashDisplay_Complete/ClashDisplay_Complete/Fonts/WEB//fonts/ClashDisplay-Regular.ttf) format('opentype')
+    src: url(../fonts/ClashDisplay_Complete/ClashDisplay_Complete/Fonts/WEB//fonts/ClashDisplay-Medium.woff) format('opentype')
+}
+
+@font-face{
+    font-family: 'ClashDisplay Bold';
+    src: url(../fonts/ClashDisplay_Complete/ClashDisplay_Complete/Fonts/WEB//fonts/ClashDisplay-Bold.woff) format('opentype')
 }
 
 
@@ -351,20 +356,101 @@ header::before{
 }
 
 .project_Modal{
-    background-color: red;
+    background-color: #fff;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     position: fixed;
     top: 50%;
     z-index: 199;
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 0 auto;
-    width: 90%;
-    height: 65vh;
+    width: 100%;
+    height: 100vh;
     display: none;
 }
 .project_Modal.showModal{
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
+
+.modal_content{
+    width: 90%;
+    height: 90%;
+}
+
+.project_detail_img{
+    width: 100%;
+    height: 35vh;
+}
+
+.project_detail_img img{
+    width: 100%;
+    height: 100%;
+}
+
+.project-detail-info{
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Project-detail-title{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2.5% 5%;
+    position: relative;
+}
+
+.Project-detail-title h5{
+    font-family: "ClashDisplay Light";
+    font-size: clamp(1rem, 1.2vw, 1.3rem);
+    color: #7a7a7a;
+}
+
+.Project-detail-title h2{
+    font-family: "ClashDisplay Medium";
+    font-size: clamp(1.5rem, 2vw, 2.3rem);
+}
+
+.Project-detail-title::before{
+    content: '';
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    width: 25%;
+    max-width: 25%;
+    height: 2px;
+    background-color: #000;
+}
+
+.project-detail-text{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2% 2%;
+}
+
+.project-detail-text h5{
+    font-family: "ClashDisplay Light";
+    font-size: clamp(1rem, 1.2vw, 1.3rem);
+    color: #7a7a7a;
+}
+
+.project-detail-text p{
+    font-family: "ClashDisplay Medium";
+    font-size: clamp(1.2rem, 1.4vw, 1.6rem);
+}
+
+.project-detail-text
 
 
 /* Responsive Design for the projects page*/

@@ -120,10 +120,24 @@ PROJECTS.addEventListener("click", function(e){
     const SelectedProject = projects.find(project => project.id == imageId);
 
     project_Modal.innerHTML = `
-    <h2>${SelectedProject.title}</h2>
+    <div class="modal_content">
+        <div class="project_detail_img">
+            <img src="${SelectedProject.img}" alt="${SelectedProject.alt}">
+        </div>
+        <div class="project-detail-info">
+            <div class="Project-detail-title">
+                <h5>TITLE</h5>
+                <h2>${SelectedProject.title}</h2>
+            </div>
+        </div>
+        <div class="project-detail-text">
+            <h5>CONTENT</h5>
+            <p>${SelectedProject.content}</p>
+        </div>
+    </div>
     `
 
-    project_Modal.classList.add("showModal");
+    project_Modal.classList.toggle("showModal");
 
 })
 
