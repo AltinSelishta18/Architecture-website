@@ -46,8 +46,6 @@
 
 
 
-
-
 /* ================= HEADER ================= */
 * {
   box-sizing: border-box;
@@ -525,6 +523,11 @@ header::before{
     border: none;
 }
 
+#tag{
+    font-family: 'ClashDisplay Medium';
+    font-size: clamp(1.1rem, 1.4vw, 1.6rem);
+}
+
 
 
 /* Responsive Design for the projects page*/
@@ -551,10 +554,6 @@ header::before{
 
     .projects-nav .links a:hover{
         color: #ffffffab;  
-    }
-
-    option{
-        background-color: #000000b0;
     }
 
     .project-container-preTitle{
@@ -598,10 +597,13 @@ header::before{
 
     .project_Modal{
         display: none;
+        background-color: #000000a4;
+        backdrop-filter: blur(10px);
     }
 
     .modal_content{
         display: flex;
+        background-color: #fff;
     }
 
     .project_detail_img{
@@ -635,6 +637,16 @@ header::before{
 
     .project_detail_buttons button:hover{
         background-color: #0000007a;
+    }
+
+    .Project-detail-title::before{
+        left: 12%;
+    }
+
+    .project-detail-text{
+        display: flex;
+        gap: 9px;
+        padding-left: 6%;
     }
 }
 

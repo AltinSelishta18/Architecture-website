@@ -141,7 +141,7 @@ PROJECTS.addEventListener("click", function(e){
                         <h5>TYPE<h5>
                     </div>
                     <div class="project-details-box-body">
-                        <i class="ri-home-4-line"></i>
+                        <span>${SelectedProject.icon}</span>
                         <p>${SelectedProject.type}</p>
                     </div>
                 </div>
@@ -161,6 +161,14 @@ PROJECTS.addEventListener("click", function(e){
                     <div class="project-details-box-body">
                         <i class="ri-calendar-2-fill"></i>
                         <p>${SelectedProject.year}</p>
+                    </div>
+                </div>
+                <div class="project-details-box">
+                    <div class="project-details-box-title">
+                        <h5>AREA<h5>
+                    </div>
+                    <div class="project-details-box-body">
+                        <p id="tag">${SelectedProject.Area}</p>
                     </div>
                 </div>
             </div>
