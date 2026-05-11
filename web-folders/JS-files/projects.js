@@ -124,7 +124,6 @@ PROJECTS.addEventListener("click", function(e){
     <div class="modal_content">
         <div class="project_detail_img">
             <img src="${SelectedProject.img}" alt="${SelectedProject.alt}">
-           <button class="remove_modal"><i class="ri-close-line"></i></button>
         </div>
         <div class="project-detail-info">
             <div class="Project-detail-title">
@@ -164,6 +163,10 @@ PROJECTS.addEventListener("click", function(e){
                         <p>${SelectedProject.year}</p>
                     </div>
                 </div>
+            </div>
+            <div class="project_detail_buttons">
+                 <button><a href="contact.html">Have a talk</a></button>
+                 <button class="remove_modal">Close Modal</button>
             </div>
         </div>
     </div>
