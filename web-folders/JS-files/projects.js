@@ -1,4 +1,4 @@
-git p// Projects file JavaScript code
+// Projects file JavaScript code
 
 import { projects } from "./Projects-data.js";
 
