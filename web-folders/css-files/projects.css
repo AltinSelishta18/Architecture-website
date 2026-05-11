@@ -299,6 +299,7 @@ header::before{
     place-items: center;
     gap: 15px;
     margin: 10% auto;
+    position: relative;
 }
 
 .project_box{
@@ -310,6 +311,7 @@ header::before{
     align-items: center;
     flex-direction: column;
     transition: transform 0.2s linear;
+    z-index: 10;
 }
 
 .project_box:hover{
@@ -346,6 +348,22 @@ header::before{
     flex-direction: column;
     gap: 15px;
     font-family: "ClashDisplay Medium";
+}
+
+.project_Modal{
+    background-color: red;
+    position: fixed;
+    top: 50%;
+    z-index: 199;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    width: 90%;
+    height: 65vh;
+    display: none;
+}
+.project_Modal.showModal{
+    display: block;
 }
 
 

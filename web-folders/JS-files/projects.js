@@ -38,6 +38,9 @@ function Render_data(arr){
         project_image.classList.add("project_img");
         project_image.src = item.img;
 
+        // This line helps the event delegation to find about which object is pulling the trigger
+        project_image.dataset.id = item.id;
+
 
         // Project_info is the container where will be the project's basic info
         const project_info = document.createElement("div");
@@ -60,7 +63,9 @@ function Render_data(arr){
         const project_year = document.createElement("p");
         project_year.textContent = item.year;
 
+        //Projects_modal
 
+        
         PROJECTS.appendChild(project_box);
 
         project_box.appendChild(project_image);
@@ -72,6 +77,7 @@ function Render_data(arr){
 
         project_info.appendChild(project_info_right);
         project_info_right.appendChild(project_year);
+
 
     });
 }
@@ -96,5 +102,31 @@ Type.addEventListener("change", function(){
 })
 
 Render_data(projects)
+
+
+// Event Delegation used to make the modal call dynamic
+
+const project_Modal = document.createElement("div");
+project_Modal.classList.add("project_Modal")
+document.body.appendChild(project_Modal)
+
+PROJECTS.addEventListener("click", function(e){
+    const box = e.target.closest(".project_box");
+    
+    if(!box) return;
+
+    const imageId = box.querySelector(".project_img").dataset.id;
+
+    const SelectedProject = projects.find(project => project.id == imageId);
+
+    project_Modal.innerHTML = `
+    <h2>${SelectedProject.title}</h2>
+    `
+
+    project_Modal.classList.add("showModal");
+
+})
+
+
 
 
