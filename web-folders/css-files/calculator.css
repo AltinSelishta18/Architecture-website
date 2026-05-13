@@ -117,7 +117,6 @@ body{
 }
 
 .floor_container{
-    background-color: aqua;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -184,17 +183,96 @@ body{
 }
 
 .Floor{
-    background-color: red;
+    border-bottom: 1px solid #f8f5ef;
     width: 100%;
 }
 
 .Floor_head{
-    background-color: green;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3% 3%;
+    padding: 1% 3%;
+}
+
+.Room_container{
+    background-color: green;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Room_head{
+    background-color: orange;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 2% 2%;
+}
+
+.Create_room_btn{
+    background-color: #000;
+    padding: 16px 32px;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-family: "Poppins Medium";
+    transition: transform 0.3s linear, background-color 0.1s linear;
+}
+
+.Room_modal{
+    box-shadow: 4px 4px 4px #d9d9d9;
+    border: 1px solid #d9d9d9;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    width: 35%;
+    height: 45vh;
+    background-color: #fff;
+    display: none;
+}
+
+.Room_modal.show{
+    display: block;
+}
+
+.Room_modal_head{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4% 5%;
+}
+
+.Room_modal_remove{
+    border: none;
+    font-size: 1.1rem;
+    background-color: transparent;
+}
+
+.room_formular{
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.room_formular input{
+    width: 80%;
+    height: 20%;
+    padding-left: 2%;
+    font-family: "Poppins Medium";
+}
+
+.room_formular button{
+    width: 40%;
+    height: 20%;
+    font-family: "Poppins Medium";
 }
 
 
