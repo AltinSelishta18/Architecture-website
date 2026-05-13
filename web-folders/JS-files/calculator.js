@@ -1,7 +1,5 @@
 let floors = [];
 
-let selectedFloorIndex = 0;
-
 const create_floor = document.querySelector(".create_floor");
 const floor_Modal = document.querySelector(".floor_Modal");
 const floor_Modal_remove = document.querySelector(".floor_Modal_remove");
@@ -13,6 +11,13 @@ const floor_container = document.querySelector(".floor_container");
 const Room_modal = document.querySelector(".Room_modal");
 const Room_modal_remove = document.querySelector(".Room_modal_remove");
 
+const room_formular = document.querySelector(".room_formular");
+const room_name = document.querySelector("#room_name");
+const room_area = document.querySelector("#room_area");
+
+let selectedFloorIndex = null;
+
+
 create_floor.addEventListener("click", function(){
     floor_Modal.classList.add("show");
 });
@@ -20,6 +25,7 @@ create_floor.addEventListener("click", function(){
 floor_Modal_remove.addEventListener("click", function(){
     floor_Modal.classList.remove("show");
 });
+
 
 floor_formular.addEventListener("submit", function(e){
     e.preventDefault();
@@ -41,6 +47,7 @@ floor_formular.addEventListener("submit", function(e){
 
     RenderFloor(floors);
 });
+
 
 function RenderFloor(arr){
     floor_container.innerHTML = "";
@@ -68,12 +75,24 @@ function RenderFloor(arr){
         Create_room.classList.add("Create_room_btn");
         Create_room.textContent = "+ ADD ROOM";
 
-        Create_room.addEventListener("click", function(){
-            Room_modal.classList.add("show");
-        });
+        const Hide_floor = document.createElement("span");
+        Hide_floor.classList.add("hide_floor");
+        Hide_floor.innerHTML = '<i class="ri-eye-off-fill"></i>';
 
         const Rooms = document.createElement("div");
         Rooms.classList.add("Rooms");
+
+        RenderRooms(ele.Rooms, Rooms);
+
+        Hide_floor.addEventListener("click", function(){
+            Rooms.classList.toggle("show");
+        });
+
+        Create_room.addEventListener("click", function(){
+            Room_modal.classList.add("show");
+
+            selectedFloorIndex = index;
+        });
 
         DeleteFloor.addEventListener("click", function(){
             floors.splice(index, 1);
@@ -83,14 +102,72 @@ function RenderFloor(arr){
         floor_container.appendChild(Floor);
         Floor.appendChild(Floor_head);
         Floor.appendChild(Room_container);
+
         Room_container.appendChild(Room_head);
         Room_container.appendChild(Rooms);
+
         Room_head.appendChild(Create_room);
+        Room_head.appendChild(Hide_floor);
+
         Floor_head.appendChild(Floor_title);
         Floor_head.appendChild(DeleteFloor);
     });
+
 }
 
 Room_modal_remove.addEventListener("click", function(){
+    Room_modal.classList.remove("show")
+})
+
+room_formular.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    if(room_name.value === "" || room_area.value === ""){
+        alert("Please fill the Input fields");
+        return;
+    }
+
+    const newRoom = {
+        R_name: room_name.value,
+        R_area: room_area.value
+    }
+
+    if(selectedFloorIndex === null) return;
+
+    floors[selectedFloorIndex].Rooms.push(newRoom);
+
+    room_name.value = "";
+    room_area.value = "";
+
     Room_modal.classList.remove("show");
+
+    RenderFloor(floors);
 });
+
+function RenderRooms(RoomsArray, RoomsContainer){
+    RoomsContainer.innerHTML = "";
+
+    RoomsArray.forEach(room =>{
+        const room_card = document.createElement("div");
+        room_card.classList.add("room_card");
+
+        const roomName = document.createElement("p");
+        roomName.textContent = room.R_name;
+
+        const roomArea = document.createElement("p");
+        roomArea.textContent = room.R_area;
+
+        room_card.appendChild(roomName);
+        room_card.appendChild(roomArea);
+
+        RoomsContainer.appendChild(room_card);
+
+    })
+}
+
+
+
+
+
+
+
