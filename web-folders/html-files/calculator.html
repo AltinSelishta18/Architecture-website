@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BS Architecture: Calculator</title>
+    <link rel="stylesheet" href="../css-files/calculator.css">
+
+    
+    <!--CSS link-->
+    <link rel="stylesheet" href="../css-files/index.css">
+
+    <!--AOS animations link-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--Icons External Link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="workspace">
+        <div class="workspace_sllogan">
+            <h4>BUILD YOUR PROJECT</h4>
+            <p>Add Floors and Rooms with Areas</p>
+        </div>
+        <div class="floor_parent_container">
+            <div class="floor-btn">
+                <button class="create_floor">+ ADD FLOOR</button>
+            </div>
+            <div class="floor_container"></div>
+        </div>
+
+        <div class="floor_Modal">
+            <div class="floor_Modal-head">
+                <h3>CREATE A FLOOR</h3>
+                <button class="floor_Modal_remove"><i class="ri-close-line"></i></button>
+            </div>
+            <form action="" id="floor_formular">
+                    <input type="text" name="Floor_Name" id="Floor_name" placeholder="Floor Name" autocomplete="off">
+                    <button id="Floor_btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="calculations"></div>
+
+    <script src="../JS-files/calculator.js"></script>
+</body>
+</html>
