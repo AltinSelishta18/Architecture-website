@@ -64,6 +64,7 @@ function RenderFloor(arr){
 
         const DeleteFloor = document.createElement("span");
         DeleteFloor.innerHTML = '<i class="ri-delete-bin-5-line"></i>';
+        DeleteFloor.style.color = "red";
 
         const Room_container = document.createElement("div");
         Room_container.classList.add("Room_container");
@@ -82,10 +83,11 @@ function RenderFloor(arr){
         const Rooms = document.createElement("div");
         Rooms.classList.add("Rooms");
 
+
         RenderRooms(ele.Rooms, Rooms);
 
         Hide_floor.addEventListener("click", function(){
-            Rooms.classList.toggle("show");
+            Rooms.classList.toggle("HIDE");
         });
 
         Create_room.addEventListener("click", function(){
@@ -129,7 +131,7 @@ room_formular.addEventListener("submit", function(e){
 
     const newRoom = {
         R_name: room_name.value,
-        R_area: room_area.value
+        R_area: Number(room_area.value)
     }
 
     if(selectedFloorIndex === null) return;
@@ -147,7 +149,7 @@ room_formular.addEventListener("submit", function(e){
 function RenderRooms(RoomsArray, RoomsContainer){
     RoomsContainer.innerHTML = "";
 
-    RoomsArray.forEach(room =>{
+    RoomsArray.forEach((room, Index) =>{
         const room_card = document.createElement("div");
         room_card.classList.add("room_card");
 
@@ -155,10 +157,21 @@ function RenderRooms(RoomsArray, RoomsContainer){
         roomName.textContent = room.R_name;
 
         const roomArea = document.createElement("p");
-        roomArea.textContent = room.R_area;
+        roomArea.textContent = room.R_area + " m²";
+
+        const DeleteRoom = document.createElement("span");
+        DeleteRoom.classList.add("DeleteRoom");
+        DeleteRoom.innerHTML = '<i class="ri-delete-bin-5-line"></i>';
+        DeleteRoom.style.color = "red";
+
+        DeleteRoom.addEventListener("click", function(){
+            RoomsArray.splice(Index, 1);
+            RenderFloor(floors);
+        });
 
         room_card.appendChild(roomName);
         room_card.appendChild(roomArea);
+        room_card.appendChild(DeleteRoom);
 
         RoomsContainer.appendChild(room_card);
 

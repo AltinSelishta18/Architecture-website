@@ -123,7 +123,6 @@ body{
     align-items: center;
     flex-direction: column;
     gap: 10px;
-    background-color: #661515;
     margin-top: 2%;
 }
 
@@ -186,29 +185,31 @@ body{
 }
 
 .Floor{
-    border-bottom: 1px solid #f8f5ef;
+    border: 2px solid black;
     width: 100%;
+    margin-top: 2%;
 }
 
 .Floor_head{
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1% 3%;
+    border-bottom: 1px solid #d9d9d9;
+    margin: 1% auto;
 }
 
 .Room_container{
-    background-color: green;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     gap: 15px;
+    background-color: #fff;
 }
 
 .Room_head{
-    background-color: orange;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -217,10 +218,10 @@ body{
 }
 
 .hide_floor{
-    background-color: #000000;
-    border-radius: 25px;
+    border: 1px solid black;
+    border-radius: 8px;
     padding: 10px;
-    color: #fff;
+    color: #000;
 }
 
 .Create_room_btn{
@@ -234,12 +235,17 @@ body{
 }
 
 .Rooms{
-    background-color: blue;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 7px;
+    background-color: #fff;
+}
+
+.Rooms.HIDE{
+    display: none;
 }
 
 .Room_modal{
@@ -293,6 +299,19 @@ body{
     width: 40%;
     height: 20%;
     font-family: "Poppins Medium";
+}
+
+.room_card{
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100%;
+    height: 7vh;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
 }
 
 
