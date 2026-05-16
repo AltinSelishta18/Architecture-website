@@ -15,6 +15,10 @@ const room_formular = document.querySelector(".room_formular");
 const room_name = document.querySelector("#room_name");
 const room_area = document.querySelector("#room_area");
 
+const Floors_counter = document.querySelector("#Floors-counter");
+const Room_counter = document.querySelector("#Room-counter");
+const total_counter = document.querySelector("#total-counter"); 
+
 let selectedFloorIndex = null;
 
 
@@ -41,6 +45,8 @@ floor_formular.addEventListener("submit", function(e){
     };
 
     floors.push(newFloor);
+
+    Update_counter();
 
     Floor_name.value = "";
     floor_Modal.classList.remove("show");
@@ -98,6 +104,7 @@ function RenderFloor(arr){
 
         DeleteFloor.addEventListener("click", function(){
             floors.splice(index, 1);
+            Update_counter();
             RenderFloor(floors);
         });
 
@@ -137,6 +144,7 @@ room_formular.addEventListener("submit", function(e){
     if(selectedFloorIndex === null) return;
 
     floors[selectedFloorIndex].Rooms.push(newRoom);
+    Update_counter();
 
     room_name.value = "";
     room_area.value = "";
@@ -166,6 +174,7 @@ function RenderRooms(RoomsArray, RoomsContainer){
 
         DeleteRoom.addEventListener("click", function(){
             RoomsArray.splice(Index, 1);
+            Update_counter();
             RenderFloor(floors);
         });
 
@@ -176,8 +185,25 @@ function RenderRooms(RoomsArray, RoomsContainer){
         RoomsContainer.appendChild(room_card);
 
     })
-}
+};
 
+function Update_counter(){
+    Floors_counter.textContent = floors.length;
+
+    const total_rooms = floors.reduce((total, floor) =>{
+        return total + floor.Rooms.length;
+    }, 0);
+
+    Room_counter.textContent = total_rooms;
+
+    const total_area = floors.reduce((total, floor) => {
+        return total + floor.Rooms.reduce((sum, room) => {
+            return sum + room.R_area;
+        }, 0);
+    }, 0);
+
+    total_counter.textContent = total_area  + "m²";
+}
 
 
 
