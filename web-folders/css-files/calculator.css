@@ -85,7 +85,7 @@ body{
 }
 
 .workspace_sllogan span{
-    background-color: rgb(233, 154, 122);
+    background-color: rgb(233, 203, 122);
     padding: 1px 11px;
     border-radius: 25px;
     margin-right: 1%;
@@ -131,9 +131,7 @@ body{
     flex-direction: column;
     gap: 10px;
     margin-top: 2%;
-    padding: 1% 1%;
     border-radius: 8px;
-    border: 1px solid #d9d9d9;
 }
 
 .floor_Modal{
@@ -195,9 +193,10 @@ body{
 }
 
 .Floor{
-    background-color: #fffdf7;
+    border: 1px solid #302d2d;
     width: 100%;
     margin-top: 2%;
+    border-radius: 5px;
 }
 
 .Floor_head{
@@ -358,7 +357,7 @@ body{
 .calculations-sllogan span{
     padding: 5px 10px;
     margin-right: 1%;
-    background-color: rgb(233, 154, 122);
+    background-color: rgb(233, 203, 122);
     border-radius: 25px;
 }
 
@@ -413,6 +412,50 @@ body{
     font-size: 2rem;
     font-family: "Poppins Medium";
 }
+
+.calculations-price{
+    border-bottom: 0.5px solid white;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 5%;
+    gap: 5px;
+}
+
+.calculations-price h4{
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+#Estimated_Price{
+    font-size: 2.5rem;
+    color: rgb(233, 203, 122);
+    font-family: "Poppins Medium";
+}
+
+.calculations-price a{
+    text-decoration: underline;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.room-calculations-display{
+    min-height: 47vh;
+}
+
+.Room-calc-card{
+    border-bottom: 0.5px solid rgb(233, 203, 122);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 2%;
+    color: #fff;
+    width: 90%;
+    margin: 2% auto;
+}
+
 
 
 

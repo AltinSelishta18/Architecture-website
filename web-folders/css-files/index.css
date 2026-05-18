@@ -592,7 +592,7 @@ nav#nav-menu.active {
 
 .features-cards{
   width: 100%;
-  margin-top: 3%;
+  margin-top: 1%;
   display: grid;
   place-items: center;
   grid-template-columns:repeat(1, 1fr);
@@ -606,6 +606,10 @@ nav#nav-menu.active {
   transform: scale(0.95);
   opacity: 0;
   transition: transform 0.3s linear, opacity 0.3s linear;
+}
+
+#card2{
+  transform: scale(1.1);
 }
 
 .card.reveal{
@@ -1186,7 +1190,7 @@ footer::before{
   }
 
   .card{
-    width: 80%;
+    width: 95%;
     height: 80%;
     aspect-ratio: 3 / 4;
   }

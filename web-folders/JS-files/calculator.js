@@ -21,6 +21,11 @@ const total_counter = document.querySelector("#total-counter");
 
 let selectedFloorIndex = null;
 
+const room_calculations_display = document.querySelector(".room-calculations-display");
+let pricePerm2 = 25;
+
+const Estimated_Price = document.querySelector("#Estimated_Price");
+
 
 create_floor.addEventListener("click", function(){
     floor_Modal.classList.add("show");
@@ -104,8 +109,7 @@ function RenderFloor(arr){
 
         DeleteFloor.addEventListener("click", function(){
             floors.splice(index, 1);
-            Update_counter();
-            RenderFloor(floors);
+            Update_UI();
         });
 
         floor_container.appendChild(Floor);
@@ -144,14 +148,15 @@ room_formular.addEventListener("submit", function(e){
     if(selectedFloorIndex === null) return;
 
     floors[selectedFloorIndex].Rooms.push(newRoom);
-    Update_counter();
+    selectedFloorIndex = null;
+
+    Update_UI();
 
     room_name.value = "";
     room_area.value = "";
 
     Room_modal.classList.remove("show");
 
-    RenderFloor(floors);
 });
 
 function RenderRooms(RoomsArray, RoomsContainer){
@@ -174,8 +179,7 @@ function RenderRooms(RoomsArray, RoomsContainer){
 
         DeleteRoom.addEventListener("click", function(){
             RoomsArray.splice(Index, 1);
-            Update_counter();
-            RenderFloor(floors);
+            Update_UI()
         });
 
         room_card.appendChild(roomName);
@@ -183,7 +187,6 @@ function RenderRooms(RoomsArray, RoomsContainer){
         room_card.appendChild(DeleteRoom);
 
         RoomsContainer.appendChild(room_card);
-
     })
 };
 
@@ -205,8 +208,34 @@ function Update_counter(){
     total_counter.textContent = total_area  + "m²";
 }
 
+function RenderRoomCalculations(Rooms){
+    room_calculations_display.innerHTML = "";
 
+    let total = 0;
 
+    Rooms.forEach(room =>{
+        let totalPrice = room.R_area * pricePerm2;
+        total += totalPrice;
+        const ROOM_calculation_card = document.createElement("div");
+        ROOM_calculation_card.classList.add("Room-calc-card");
+
+        ROOM_calculation_card.innerHTML = `
+            <h5>${room.R_name}</h5>
+            <h5>${totalPrice}€</h5>
+        `
+
+        room_calculations_display.appendChild(ROOM_calculation_card);
+    })
+
+    Estimated_Price.textContent = total + "€";
+}
+
+function Update_UI(){
+    RenderFloor(floors);
+    Update_counter();
+    const allRooms = floors.flatMap(f => f.Rooms);
+    RenderRoomCalculations(allRooms);
+}
 
 
 
