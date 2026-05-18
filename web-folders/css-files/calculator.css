@@ -51,14 +51,15 @@
 }
 
 body{
-    min-height: 100vh;
+    min-height: 200vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
 }
 
 .workspace{
     background-color: #fff;
-    width: 60%;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -142,9 +143,10 @@ body{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 35%;
+    width: 85%;
     height: 35vh;
     display: none;
+    max-width: 55%;
 }
 
 .floor_Modal.show{
@@ -264,12 +266,14 @@ body{
     box-shadow: 4px 4px 4px #d9d9d9;
     border: 1px solid #d9d9d9;
     position: absolute;
-    left: 50%;
+    left: 5%;
     top: 25%;
-    width: 35%;
+    width: 85%;
     height: 45vh;
     background-color: #fff;
     display: none;
+    z-index: 99;
+    max-width: 55%;
 }
 
 .Room_modal.show{
@@ -328,7 +332,7 @@ body{
 }
 
 .calculations{
-    width: 40%;
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -397,20 +401,20 @@ body{
 
 #Floors-counter{
     width: 40%;
-    font-size: 2rem;
     font-family: "Poppins Medium";
+    font-size: clamp(1.3rem, 1.9vw, 2.4rem);
 }
 
 #Room-counter{
     width: 40%;
-    font-size: 2rem;
     font-family: "Poppins Medium";
+    font-size: clamp(1.3rem, 1.9vw, 2.4rem);
 }
 
 #total-counter{
     width: 40%;
-    font-size: 2rem;
     font-family: "Poppins Medium";
+    font-size: clamp(1.3rem, 1.9vw, 2.4rem);
 }
 
 .calculations-price{
@@ -454,6 +458,19 @@ body{
     color: #fff;
     width: 90%;
     margin: 2% auto;
+}
+
+/*here goes responsive design for the calculator*/
+
+@media(min-width: 768px){
+    body{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .calculations-container{
+        max-width: 1400px;
+    }
 }
 
 
