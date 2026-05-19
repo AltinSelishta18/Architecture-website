@@ -1,0 +1,409 @@
+/* Here goes the style for the contact form*/
+
+
+/* Questrial Font */
+
+
+@font-face{
+  font-family: 'Questrial';
+  src: url('../fonts/Questrial-Regular.otf') format('opentype')
+}
+
+@font-face{
+    font-family: 'Poppins Bold';
+    src: url(../fonts/Poppins_fonts/Poppins-Bold.ttf) format('opentype')
+}
+
+@font-face{
+    font-family: 'Poppins Medium';
+    src: url(../fonts/Poppins_fonts/Poppins-Medium.ttf) format('opentype')
+}
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  font-family: 'Questrial', sans-serif;
+}
+
+.container{
+    min-height: 100vh;
+    background-image: url(../images/HEADER-img.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.container::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.589);
+    z-index: 1;
+}
+
+.contact-informations{
+    width: 100%;
+    min-height: 80vh;
+    z-index: 3;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.contact-informations h2{
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    font-size: clamp(2rem, 2.5vw, 2.8rem);
+    font-family: 'Poppins Bold';
+}
+
+.contact-informations p{
+    font-size: clamp(0.9rem, 1.2vw, 1.8rem);
+    width: 80%;
+    margin: 0 auto;
+    color: #fff;
+    
+    font-family: 'Poppins Medium';
+}
+
+.contact-icons{
+    background-color: #000;
+    z-index: 3;
+    width: 90%;
+    border-radius: 50px;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 650px;
+}
+
+.general-icons{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.general-icons ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    gap: 10px;
+}
+
+.general-icons ul li a{
+    color: #000;
+    font-size: clamp(1.3rem, 1.5vw, 1.6rem);
+    background-color: #ffffff;
+    padding: 15px 15px;
+    border-radius: 50px;
+    transition: background-color 0.2s linear, color 0.4s linear, border 0.6s linear;
+}
+
+.general-icons ul li a:hover{
+    color: #fff;
+    background-color: #000;
+    border: 2px solid rgb(255, 255, 255);
+}
+.modes{
+    background-color: rgb(255, 255, 255);
+    width: 48%;
+    height: 90%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.modes ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container{
+    transform: translateX(2px);
+    background-color: black;
+    color: #fff;
+    width: 85px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: transform 0.3s linear;
+}
+
+#container.active{
+    transform: translateX(95px);
+    background-color: #d8d8d8;
+    color: #000;
+}
+
+#dark-icon{
+    opacity: 1;
+    position: absolute;
+}
+
+#dark-icon.hide{
+    opacity: 0;
+    color: #000;
+}
+
+#light-icon{
+    position: absolute;
+    opacity: 0;
+}
+
+#light-icon.show{
+    opacity: 1;
+}
+
+#formular{
+    background-color: rgba(202, 202, 202, 0.274);
+    border-radius: 25px;
+    backdrop-filter: blur(5px);
+    z-index: 1;
+    width: 90%;
+    min-height: 72vh;
+    margin-bottom: 5%;
+}
+
+.formular-title{
+    height: 7vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10% 6%;
+}
+
+.formular-title h2{
+    font-family: "Poppins Bold";
+    color: #fff;
+}
+
+.data-container{
+    background-color: rgba(0, 0, 0, 0.445);
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    gap: 15px;
+    position: relative;
+}
+
+
+/* here is created the theme which will be changed after being triggered by JS event */
+#data-container.change{
+    background-color: #fff;
+    color: #000;
+}
+
+.data-container input{
+    width: 85%;
+    height: 10%;
+    background-color: transparent;
+    font-size: 1.1rem;
+    padding-left: 2%;
+    font-family: "Questrial";
+    border: 1px solid darkgrey;
+    color: #fff;
+}
+
+.data-container.change input,
+.data-container.change textarea {
+    color: #000;
+}
+
+.data-container input:focus,
+.data-container textarea:focus {
+    outline: none;
+}
+
+/* dark mode */
+.data-container input:focus {
+    color: #fff;
+}
+
+/* light mode */
+.data-container.change input:focus,
+.data-container.change textarea:focus {
+    color: #000;
+}
+
+
+#helpMsg{
+    width: 85%;
+    height: 28%;
+    background-color: transparent;
+    padding: 4% 4%;
+    border: 1px solid darkgray;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+#helpMsg:focus{
+    color: #fff;
+}
+
+.data-container button{
+    width: 85%;
+    height: 10%;
+    font-size: 1.1rem;
+    background-color: #ffffff;
+    color: #000;
+    border-radius: 15px;
+    font-family: "Poppins Medium";
+    border: 1px solid black;
+    transition: background-color 0.3s linear;
+}
+
+.data-container button:hover{
+    background-color: #ffffff79;
+}
+
+.Error_modal{
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 45vh;
+    display: none;
+    border: 1px solid black;
+}
+
+.error-head{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-title{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+}
+
+.error-title h3{
+    font-size: 1.3rem;
+    font-family: "Poppins Bold";
+    color: red;
+}
+
+.error-title i{
+    font-size: 1.3rem;
+    color: red;
+}
+
+.close-modal{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-modal i{
+    font-size: 2rem;
+}
+
+.error-body{
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-body h5{
+    font-size: 1.2rem;
+    width: 80%;
+    color: red;
+    margin: auto;
+}
+
+/* Here starts responsive design for the contact form */
+
+@media(min-width: 920px){
+    .container{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contact-informations{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-icons{
+        margin: 0 auto;
+    }
+    
+    #formular{
+        width: 100%;
+        margin-right: 4%;
+        max-width: 550px;
+    }
+
+    #container{
+        height: 75px;
+        width: 125px;
+    }
+
+    #container.active{
+        transform: translateX(170px);
+    }
+}
+
+@media(min-width: 1024px){
+    #container{
+        height: 53px;
+        width: 100px;
+    }
+    .contact-icons{
+        height: 10vh;
+    }
+
+    #container.active{
+        transform: translateX(208px);
+    }
+}
+
+
+
+
+
+
+

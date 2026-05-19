@@ -133,6 +133,7 @@ body{
     gap: 10px;
     margin-top: 2%;
     border-radius: 8px;
+    overflow-y: scroll;
 }
 
 .floor_Modal{
@@ -265,7 +266,7 @@ body{
 .Room_modal{
     box-shadow: 4px 4px 4px #d9d9d9;
     border: 1px solid #d9d9d9;
-    position: absolute;
+    position: fixed;
     left: 5%;
     top: 25%;
     width: 85%;
@@ -339,37 +340,15 @@ body{
     align-items: center;
     flex-direction: column;
 }
-.calculations-sllogan{
-    border: 0.5px solid #d9d9d9;
-    box-shadow: 2px 2px 4px #d9d9d9;
-    border-radius: 10px;
-    width: 90%;
-    margin: 4.2% auto;
-    padding: 1.8% 4%;
-}
 
-.calculations-sllogan h3{
-    font-family: "Poppins Medium";
-}
-
-.calculations-sllogan p{
-    font-family: "Poppins Light";
-    padding-left: 1%;
-    margin-top: 2%;
-}
-
-.calculations-sllogan span{
-    padding: 5px 10px;
-    margin-right: 1%;
-    background-color: rgb(233, 203, 122);
-    border-radius: 25px;
-}
 
 .calculations-container{
     width: 90%;
     background-color: black;
-    height: 90%;
+    height: 90vh;
     border-radius: 10px;
+    position: sticky;
+    top: 2%;
 }
 
 .calculation-data{
@@ -446,7 +425,8 @@ body{
 }
 
 .room-calculations-display{
-    min-height: 47vh;
+    overflow-y: auto;
+    flex: 1;
 }
 
 .Room-calc-card{
@@ -470,6 +450,30 @@ body{
 
     .calculations-container{
         max-width: 1400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: sticky;
+        top: 2%;
+    }
+
+    .room-calculations-display{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+        overflow-y: scroll;
+    }
+
+    .calculations-price{
+        width: 100%;
+    }
+
+    .Room_modal{
+        max-width: 35%;
     }
 }
 
