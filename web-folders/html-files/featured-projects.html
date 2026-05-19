@@ -28,13 +28,13 @@
 <div class="feature-projects-container">
 
     <div class="feature-project-date">
-        <div class="feature-project-year">2026</div>
-        <div class="feature-project-year">2027</div>
-        <div class="feature-project-year">2028</div>
+        <div data-aos="zoom-in" class="feature-project-year">2026</div>
+        <div data-aos="zoom-in" class="feature-project-year">2027</div>
+        <div data-aos="zoom-in" class="feature-project-year">2028</div>
     </div>
 
     <!-- PROJECT 1 -->
-    <div class="feature-project-info">
+    <div data-aos="fade-right" class="feature-project-info">
         <div class="feature-project-img">
             <img src="../images/beach-house.jpg" alt="House near the Beach">
         </div>
@@ -45,7 +45,7 @@
                     <h2>VILLA HOUSE</h2>
                     <h4>ULCINJ, MONTENEGRO</h4>
                 </div>
-                <button>
+                <button class="coming-soon">
                     VIEW PROJECT 
                     <i class="ri-arrow-right-up-long-line"></i>
                 </button>
@@ -53,7 +53,7 @@
         </div>
 
         <!-- PROJECT 2 -->
-        <div class="feature-project-img">
+        <div data-aos="fade-right" class="feature-project-img">
             <img src="../images/building-project.jpg" alt="House near the Beach">
         </div>
         <div class="feature-project-data">
@@ -63,7 +63,7 @@
                     <h2>BANK CENTER</h2>
                     <h4>TIRANA, ALBANIA</h4>
                 </div>
-                <button>
+                <button class="coming-soon">
                     VIEW PROJECT 
                     <i class="ri-arrow-right-up-long-line"></i>
                 </button>
@@ -72,7 +72,7 @@
 
         <!-- PROJECT 3 -->
     
-        <div class="feature-project-img">
+        <div data-aos="fade-right" class="feature-project-img">
             <img src="../images/private-residence.jpg" alt="House near the Beach">
         </div>
         <div class="feature-project-data">
@@ -82,7 +82,7 @@
                     <h2>AZURE HEIGHTS</h2>
                     <h4>ISTAMBUL, TURKEY</h4>
                 </div>
-                <button>
+                <button class="coming-soon">
                     VIEW PROJECT
                     <i class="ri-arrow-right-up-long-line"></i>
                 </button>
@@ -91,5 +91,22 @@
     </div>
 </div>
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+  });
+
+  const feature_projects = document.querySelector(".feature-project-info");
+
+  feature_projects.addEventListener("click", function(e){
+    const button = e.target.closest(".coming-soon");
+
+    if(button){
+        alert("This option will be avaliable soon")
+    }
+  })
+</script>
 </body>
 </html>
