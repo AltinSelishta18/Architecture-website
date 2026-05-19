@@ -98,10 +98,10 @@ Type.addEventListener("change", function(){
             return;
         }
 
-        Render_data(filtered)
+        Render_data(filtered);
 })
 
-Render_data(projects)
+Render_data(projects);
 
 
 // Event Delegation used to make the modal call dynamic

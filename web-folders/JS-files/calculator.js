@@ -1,3 +1,4 @@
+
 let floors = [];
 
 const create_floor = document.querySelector(".create_floor");
@@ -235,6 +236,7 @@ function Update_UI(){
     Update_counter();
     const allRooms = floors.flatMap(f => f.Rooms);
     RenderRoomCalculations(allRooms);
+
 }
 
 
