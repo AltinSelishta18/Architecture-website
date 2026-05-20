@@ -1234,19 +1234,31 @@ footer::before{
 
   .service-left{
     height: 80vh;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
   }
 
-  .services-small-img{
+  .service-left-title{
+    width: 100%;
+  }
+
+   .service-left .services-small-img{
     width: 100%;
     max-width: 850px;
-    padding: 0% 0% 2% 2%;
-    
+    min-height: 14vh !important;
   }
 
   .services-small-img img{
     width: 100%;
-    height: 100%;
+    height: 90%;
+    object-fit: cover;
+  }
+
+  .small-img-overlay::before{
+    top: 0;
+    height: 95%;
   }
 
   .service-big-img{
